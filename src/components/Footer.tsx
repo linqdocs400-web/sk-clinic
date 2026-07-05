@@ -95,7 +95,7 @@ export function Footer() {
           <div className="mt-5 space-y-3 text-sm">
             <p>
               <a
-                href="https://maps.google.com/?q=Dilsukhnagar,Hyderabad,500060"
+                href="https://share.google/wE4eXN6Vv8aiPBx4N"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-white underline underline-offset-2"
