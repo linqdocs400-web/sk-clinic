@@ -9,7 +9,7 @@ import { Conditions } from "./components/Conditions";
 import { Treatments } from "./components/Treatments";
 import { Results } from "./components/Results";
 import { BeforeAfter } from "./components/BeforeAfter";
-import { Testimonials } from "./components/Testimonials";
+import { GoogleReviews } from "./components/GoogleReviews";
 import { Gallery } from "./components/Gallery";
 import { Visit } from "./components/Visit";
 
@@ -25,7 +25,7 @@ export function App() {
       <Treatments />
       <Results />
       <BeforeAfter />
-      <Testimonials />
+      <GoogleReviews />
       <Gallery />
       <Visit />
       <Footer />
