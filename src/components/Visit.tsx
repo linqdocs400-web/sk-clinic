@@ -41,7 +41,7 @@ export function Visit() {
               className="w-full h-full min-h-[360px] border-0"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              src="https://www.google.com/maps?q=Dilsukhnagar%20Hyderabad&output=embed"
+              src="https://maps.app.goo.gl/bx29btJPjHVVmcPDA"
             />
           </div>
         </div>
