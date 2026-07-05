@@ -1,6 +1,6 @@
 import { Icon } from "./Icon";
 import { motion } from "framer-motion";
-import { useRef } from "react";
+import { useAutoScroll } from "../hooks/useAutoScroll";
 
 const REVIEWS = [
   {
@@ -36,7 +36,7 @@ const REVIEWS = [
 ];
 
 export function GoogleReviews() {
-  const containerRef = useRef<HTMLDivElement>(null);
+  const containerRef = useAutoScroll(0.8);
 
   return (
     <section className="py-20 lg:py-28 bg-sage overflow-hidden">
@@ -80,13 +80,13 @@ export function GoogleReviews() {
           <div className="absolute right-0 top-0 bottom-0 w-8 md:w-32 bg-gradient-to-l from-sage to-transparent z-10 pointer-events-none" />
           
           <div 
-            className="flex gap-6 overflow-x-auto lg:overflow-hidden pb-8 lg:pb-0 custom-scrollbar snap-x snap-mandatory"
-            ref={containerRef}
+            className="flex gap-6 overflow-x-auto pb-8 custom-scrollbar snap-x snap-mandatory touch-pan-x"
+            ref={containerRef as any}
           >
             <div
-              className="flex gap-6 min-w-max lg:animate-[marquee_25s_linear_infinite] hover:[animation-play-state:paused]"
+              className="flex gap-6 min-w-max"
             >
-              {[...REVIEWS, ...REVIEWS, ...REVIEWS].map((review, i) => (
+              {[...REVIEWS, ...REVIEWS, ...REVIEWS, ...REVIEWS].map((review, i) => (
                 <div 
                   key={i} 
                   className="bg-cream border border-ink/10 p-7 w-[300px] sm:w-[380px] shrink-0 shadow-sm hover:shadow-md transition-shadow duration-300 snap-center rounded-2xl"

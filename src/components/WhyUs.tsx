@@ -1,5 +1,6 @@
 import { SectionLabel } from "./SectionLabel";
 import { Icon } from "./Icon";
+import { useAutoScroll } from "../hooks/useAutoScroll";
 
 export const REASONS = [
   { t: "Experienced Dermatologists", i: "stethoscope" },
@@ -15,6 +16,9 @@ export const REASONS = [
 ];
 
 export function WhyUs() {
+  // Pass a custom speed to the auto-scroll hook
+  const scrollRef = useAutoScroll(0.8);
+
   return (
     <section id="why">
       <SectionLabel>why us ?</SectionLabel>
@@ -26,12 +30,34 @@ export function WhyUs() {
           <p className="mt-4 text-ink/70 max-w-xl mx-auto text-sm">
             Ten reasons patients across Hyderabad trust us with their skin and hair.
           </p>
-          <div className="mt-12 bg-ink/10 border border-ink/10 max-w-6xl mx-auto overflow-x-auto lg:overflow-visible pb-6 custom-scrollbar">
-            <div className="flex lg:grid lg:grid-cols-5 gap-px min-w-max lg:min-w-0">
+          
+          {/* Mobile Auto-Scrolling View */}
+          <div 
+            className="mt-12 lg:hidden bg-ink/10 border border-ink/10 max-w-6xl mx-auto overflow-x-auto pb-6 custom-scrollbar touch-pan-x"
+            ref={scrollRef as any}
+          >
+            <div className="flex gap-px min-w-max">
+              {[...REASONS, ...REASONS, ...REASONS].map((r, index) => (
+                <div
+                  key={index}
+                  className="bg-cream p-6 sm:p-8 flex flex-col items-center text-center gap-4 min-h-[180px] justify-center w-[160px] sm:w-[200px] shrink-0"
+                >
+                  <span className="grid h-14 w-14 place-items-center rounded-full bg-ink text-cream">
+                    <Icon name={r.i} className="w-6 h-6" />
+                  </span>
+                  <div className="font-display text-lg text-ink leading-tight">{r.t}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Desktop Grid View */}
+          <div className="mt-12 hidden lg:block bg-ink/10 border border-ink/10 max-w-6xl mx-auto">
+            <div className="grid grid-cols-5 gap-px">
               {REASONS.map((r) => (
                 <div
                   key={r.t}
-                  className="bg-cream p-6 sm:p-8 flex flex-col items-center text-center gap-4 min-h-[180px] justify-center w-[160px] sm:w-[200px] lg:w-auto shrink-0"
+                  className="bg-cream p-6 sm:p-8 flex flex-col items-center text-center gap-4 min-h-[180px] justify-center w-auto shrink-0 hover:bg-cream/90 transition-colors"
                 >
                   <span className="grid h-14 w-14 place-items-center rounded-full bg-ink text-cream">
                     <Icon name={r.i} className="w-6 h-6" />
