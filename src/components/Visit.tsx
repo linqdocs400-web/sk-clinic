@@ -14,7 +14,7 @@ export function Visit() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10 -mt-24 lg:-mt-32 relative">
         <div className="grid lg:grid-cols-2 gap-6 lg:gap-10">
           <div className="bg-cream p-8 sm:p-10 shadow-[0_30px_60px_-30px_rgba(0,0,0,0.25)] space-y-7">
-            <InfoRow icon="pin" title="Address" href="https://maps.google.com/?q=Dilsukhnagar+Hyderabad">
+            <InfoRow icon="pin" title="Address" href="https://maps.app.goo.gl/bx29btJPjHVVmcPDA">
               16-11-578/A, Opposite Red Cross Hospital,
               <br />
               Near Raghavendra Hotel, Gaddiannaram Cross Road,

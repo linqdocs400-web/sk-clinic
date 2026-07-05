@@ -31,7 +31,6 @@ export function Gallery() {
                 <img
                   src={src}
                   alt={`Clinic Interior ${i + 1}`}
-                  loading="lazy"
                   className="w-full h-full object-cover hover:scale-105 transition duration-700"
                 />
               </div>
