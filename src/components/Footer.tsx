@@ -95,7 +95,7 @@ export function Footer() {
           <div className="mt-5 space-y-3 text-sm">
             <p>
               <a
-                href="https://share.google/wE4eXN6Vv8aiPBx4N"
+                href="https://maps.app.goo.gl/Z4LYDTPEM5C82Wyk9"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-white underline underline-offset-2"
