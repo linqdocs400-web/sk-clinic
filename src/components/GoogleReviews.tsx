@@ -1,6 +1,6 @@
 import { Icon } from "./Icon";
 import { motion } from "framer-motion";
-import { useRef, useEffect, useState } from "react";
+import { useRef } from "react";
 
 const REVIEWS = [
   {
@@ -37,7 +37,6 @@ const REVIEWS = [
 
 export function GoogleReviews() {
   const containerRef = useRef<HTMLDivElement>(null);
-  const [isHovered, setIsHovered] = useState(false);
 
   return (
     <section className="py-20 lg:py-28 bg-sage overflow-hidden">
@@ -75,30 +74,22 @@ export function GoogleReviews() {
         {/* Carousel Section */}
         <div 
           className="mt-16 relative"
-          onMouseEnter={() => setIsHovered(true)}
-          onMouseLeave={() => setIsHovered(false)}
         >
           {/* Gradient Edges */}
-          <div className="absolute left-0 top-0 bottom-0 w-12 md:w-32 bg-gradient-to-r from-sage to-transparent z-10 pointer-events-none" />
-          <div className="absolute right-0 top-0 bottom-0 w-12 md:w-32 bg-gradient-to-l from-sage to-transparent z-10 pointer-events-none" />
+          <div className="absolute left-0 top-0 bottom-0 w-8 md:w-32 bg-gradient-to-r from-sage to-transparent z-10 pointer-events-none" />
+          <div className="absolute right-0 top-0 bottom-0 w-8 md:w-32 bg-gradient-to-l from-sage to-transparent z-10 pointer-events-none" />
           
           <div 
-            className="flex gap-6 overflow-hidden touch-pan-x"
+            className="flex gap-6 overflow-x-auto lg:overflow-hidden pb-8 lg:pb-0 custom-scrollbar snap-x snap-mandatory"
             ref={containerRef}
           >
-            <motion.div
-              animate={{ x: isHovered ? undefined : "-50%" }}
-              transition={{
-                duration: 25,
-                ease: "linear",
-                repeat: Infinity,
-              }}
-              className="flex gap-6 min-w-max"
+            <div
+              className="flex gap-6 min-w-max lg:animate-[marquee_25s_linear_infinite] hover:[animation-play-state:paused]"
             >
               {[...REVIEWS, ...REVIEWS, ...REVIEWS].map((review, i) => (
                 <div 
                   key={i} 
-                  className="bg-cream border border-ink/10 p-7 w-[320px] sm:w-[380px] shrink-0 shadow-sm hover:shadow-md transition-shadow duration-300"
+                  className="bg-cream border border-ink/10 p-7 w-[300px] sm:w-[380px] shrink-0 shadow-sm hover:shadow-md transition-shadow duration-300 snap-center rounded-2xl"
                 >
                   <div className="flex items-center gap-4">
                     <div className="w-12 h-12 rounded-full bg-ink text-cream flex items-center justify-center font-display text-xl">
@@ -126,7 +117,7 @@ export function GoogleReviews() {
                   </p>
                 </div>
               ))}
-            </motion.div>
+            </div>
           </div>
         </div>
 
