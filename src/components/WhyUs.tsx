@@ -26,7 +26,7 @@ export function WhyUs() {
           <p className="mt-4 text-ink/70 max-w-xl mx-auto text-sm">
             Ten reasons patients across Hyderabad trust us with their skin and hair.
           </p>
-          <div className="mt-12 lg:grid lg:grid-cols-5 gap-px bg-ink/10 border border-ink/10 max-w-6xl mx-auto overflow-x-auto lg:overflow-visible pb-4 lg:pb-0 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+          <div className="mt-12 bg-ink/10 border border-ink/10 max-w-6xl mx-auto overflow-x-auto lg:overflow-visible pb-6 custom-scrollbar">
             <div className="flex lg:grid lg:grid-cols-5 gap-px min-w-max lg:min-w-0">
               {REASONS.map((r) => (
                 <div

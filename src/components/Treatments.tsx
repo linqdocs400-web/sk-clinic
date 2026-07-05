@@ -72,7 +72,7 @@ export function Treatments() {
             </h2>
           </div>
         </div>
-        <div className="mt-12 lg:grid lg:grid-cols-4 gap-5 overflow-x-auto lg:overflow-visible pb-4 lg:pb-0 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+        <div className="mt-12 overflow-x-auto lg:overflow-visible pb-6 custom-scrollbar">
           <div className="flex lg:grid lg:grid-cols-4 gap-5 min-w-max lg:min-w-0">
             {TREATMENT_GROUPS.map((g) => (
               <div
