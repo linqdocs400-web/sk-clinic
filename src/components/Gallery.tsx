@@ -17,25 +17,56 @@ export function Gallery() {
           Inside the clinic.
         </h2>
 
-        <div className="custom-scrollbar mt-12 overflow-x-auto pb-6 lg:overflow-visible lg:pb-0 lg:[scrollbar-width:none] lg:[&::-webkit-scrollbar]:hidden">
-          <div className="flex w-max gap-3 sm:gap-4 lg:grid lg:h-[500px] lg:w-full lg:grid-cols-4 lg:grid-rows-2 xl:h-[600px]">
+        {/* Mobile */}
+        <div className="mt-12 grid grid-cols-2 gap-3 lg:hidden">
+          {GALLERY.map((src, i) => (
+            <div
+              key={i}
+              className={`group overflow-hidden rounded-sm bg-ink/10 ${
+                i === 2 ? "row-span-2 aspect-[3/4]" : "aspect-square"
+              }`}
+            >
+              <img
+                src={src}
+                alt={`Clinic Interior ${i + 1}`}
+                draggable={false}
+                className="block h-full w-full select-none object-cover transition-transform duration-700 group-hover:scale-105"
+                style={{
+                  WebkitUserDrag: "none",
+                  WebkitTouchCallout: "none",
+                  userSelect: "none",
+                  touchAction: "manipulation",
+                  backfaceVisibility: "hidden",
+                  transform: "translateZ(0)",
+                }}
+              />
+            </div>
+          ))}
+        </div>
+
+        {/* Desktop (UNCHANGED) */}
+        <div className="mt-12 hidden lg:block">
+          <div className="grid h-[500px] grid-cols-4 grid-rows-2 gap-4 xl:h-[600px]">
             {GALLERY.map((src, i) => (
               <div
                 key={i}
-                className={`group relative shrink-0 overflow-hidden rounded-sm bg-ink/10 ${
+                className={`overflow-hidden rounded-sm bg-ink/10 ${
                   i === 2
-                    ? "aspect-[3/4] w-[240px] sm:w-[320px] lg:row-span-2 lg:h-full lg:w-full lg:aspect-auto"
+                    ? "row-span-2"
                     : i === 4
-                    ? "aspect-[3/2] w-[420px] sm:w-[560px] lg:col-span-2 lg:h-full lg:w-full lg:aspect-auto"
-                    : "aspect-square w-[240px] sm:w-[320px] lg:h-full lg:w-full lg:aspect-auto"
+                    ? "col-span-2"
+                    : ""
                 }`}
               >
                 <img
                   src={src}
                   alt={`Clinic Interior ${i + 1}`}
                   draggable={false}
-                  className="block h-full w-full object-cover transition-transform duration-700 ease-out will-change-transform group-hover:scale-105"
+                  className="block h-full w-full object-cover transition-transform duration-700 hover:scale-105"
                   style={{
+                    WebkitUserDrag: "none",
+                    WebkitTouchCallout: "none",
+                    userSelect: "none",
                     backfaceVisibility: "hidden",
                     transform: "translateZ(0)",
                   }}
