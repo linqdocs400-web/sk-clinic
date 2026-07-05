@@ -15,7 +15,7 @@ export function Gallery() {
 
         <h2 className="font-display text-4xl sm:text-5xl text-ink mt-2">Inside the clinic.</h2>
 
-        <div className="mt-12 overflow-x-auto lg:overflow-visible pb-4 lg:pb-0 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+        <div className="mt-12 overflow-x-auto lg:overflow-visible pb-6 custom-scrollbar">
           <div className="flex lg:grid lg:grid-cols-4 lg:grid-rows-2 gap-3 sm:gap-4 min-w-max lg:min-w-0">
             {GALLERY.map((src, i) => (
               <div

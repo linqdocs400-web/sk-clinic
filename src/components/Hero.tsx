@@ -1,5 +1,6 @@
 import doctorImg from "../assets/doctor.png";
 import { Stat } from "./Stat";
+import { motion } from "framer-motion";
 
 export const SPECIALTIES = [
   "Dermatology",
@@ -11,16 +12,34 @@ export const SPECIALTIES = [
   "STD Care",
 ];
 
+const fadeUpVariant = {
+  hidden: { opacity: 0, y: 30, filter: "blur(4px)" },
+  visible: { opacity: 1, y: 0, filter: "blur(0px)", transition: { duration: 0.8, ease: "easeOut" } }
+};
+
+const staggerContainer = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1, transition: { staggerChildren: 0.15 } }
+};
+
 export function Hero() {
   return (
-    <section id="about" className="relative">
+    <section id="about" className="relative overflow-hidden">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10 pt-10 lg:pt-16">
         <div className="grid lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] gap-10 lg:gap-14 items-end">
           {/* Portrait */}
-          <div className="relative animate-slide-in-right">
+          <motion.div 
+            initial={{ opacity: 0, x: -40 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+            className="relative"
+          >
             <div className="absolute -top-6 -left-2 lg:-left-6 w-40 h-44 border border-ink/15 hidden sm:block" />
             <div className="relative overflow-hidden bg-panel">
-              <img
+              <motion.img
+                initial={{ scale: 1.05 }}
+                animate={{ scale: 1 }}
+                transition={{ duration: 2, ease: "easeOut" }}
                 src={doctorImg}
                 alt="Dr. Koushik, Dermatologist"
                 className="w-full h-[460px] sm:h-[560px] lg:h-[640px] object-cover object-top"
@@ -28,7 +47,12 @@ export function Hero() {
                 height={1536}
               />
             </div>
-            <div className="absolute -bottom-5 -left-2 lg:left-6 bg-cream shadow-[0_18px_40px_-20px_rgba(0,0,0,0.25)] p-4 pr-6 max-w-[260px] hidden sm:block">
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.6, duration: 0.8 }}
+              className="absolute -bottom-5 -left-2 lg:left-6 bg-cream shadow-[0_18px_40px_-20px_rgba(0,0,0,0.25)] p-4 pr-6 max-w-[260px] hidden sm:block"
+            >
               <div className="text-[oklch(0.72_0.08_70)] tracking-widest">★★★★★</div>
               <p className="mt-2 text-[13px] leading-snug text-ink/90">
                 "Genuinely the most thoughtful dermatologist I've met."
@@ -36,63 +60,78 @@ export function Hero() {
               <div className="mt-2 text-[10px] tracking-[0.24em] text-ink/55">
                 — VERIFIED PATIENT
               </div>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
 
           {/* Copy */}
-          <div className="pb-10 lg:pb-16">
-            <div className="font-script text-3xl text-ink-soft animate-fade-in-up">welcome</div>
-            <h1
-              className="font-display text-[40px] sm:text-6xl lg:text-7xl leading-[1.02] text-ink mt-2 tracking-tight animate-fade-in-up"
-              style={{ animationDelay: "0.1s" }}
+          <motion.div 
+            variants={staggerContainer}
+            initial="hidden"
+            animate="visible"
+            className="pb-10 lg:pb-16"
+          >
+            <motion.div variants={fadeUpVariant} className="font-script text-3xl text-ink-soft">welcome</motion.div>
+            <motion.h1
+              variants={fadeUpVariant}
+              className="font-display text-[40px] sm:text-6xl lg:text-7xl leading-[1.02] text-ink mt-2 tracking-tight"
             >
               Advanced Skin, Hair
               <br className="hidden sm:block" /> &amp; Laser Care
-            </h1>
-            <div
-              className="font-script text-3xl sm:text-4xl text-ink-soft/90 mt-3 animate-fade-in-up"
-              style={{ animationDelay: "0.2s" }}
+            </motion.h1>
+            <motion.div
+              variants={fadeUpVariant}
+              className="font-script text-3xl sm:text-4xl text-ink-soft/90 mt-3"
             >
               for every stage of life.
-            </div>
-            <p
-              className="mt-6 max-w-xl text-ink/70 text-[15px] leading-relaxed animate-fade-in-up"
-              style={{ animationDelay: "0.3s" }}
+            </motion.div>
+            <motion.p
+              variants={fadeUpVariant}
+              className="mt-6 max-w-xl text-ink/70 text-[15px] leading-relaxed"
             >
               Expert dermatology, trichology, cosmetic and laser treatments — delivered with
               precision, care and the trust of thousands of patients across Hyderabad.
-            </p>
-            <div
-              className="mt-8 flex flex-wrap gap-3 animate-fade-in-up"
-              style={{ animationDelay: "0.4s" }}
+            </motion.p>
+            <motion.div
+              variants={fadeUpVariant}
+              className="mt-8 flex flex-wrap gap-3"
             >
-              <a
+              <motion.a
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
                 href="https://wa.me/918985504044?text=Hi,%20I%20am%20from%20your%20website.%20I%20would%20like%20to%20book%20an%20appointment."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-ink text-cream text-xs tracking-[0.22em] uppercase px-7 py-4 hover:bg-ink-soft transition"
+                className="bg-ink text-cream text-xs tracking-[0.22em] uppercase px-7 py-4 hover:bg-ink-soft transition inline-block"
               >
                 Book Appointment
-              </a>
-              <a
+              </motion.a>
+              <motion.a
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
                 href="#treatments"
-                className="border border-ink/40 text-ink text-xs tracking-[0.22em] uppercase px-7 py-4 hover:bg-ink hover:text-cream transition"
+                className="border border-ink/40 text-ink text-xs tracking-[0.22em] uppercase px-7 py-4 hover:bg-ink hover:text-cream transition inline-block"
               >
                 Explore Treatments
-              </a>
-            </div>
-          </div>
+              </motion.a>
+            </motion.div>
+          </motion.div>
         </div>
       </div>
 
       {/* Rose stat band */}
       <div className="bg-rose mt-12 lg:-mt-32 lg:pt-40 lg:pb-12 py-10 lg:relative lg:z-[-1]">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10 lg:pl-[42%]">
-          <div className="flex flex-wrap gap-8 sm:gap-14 text-cream">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="flex flex-wrap gap-8 sm:gap-14 text-cream"
+          >
             <Stat n="7k+" l="Patients" />
             <Stat n="15+" l="Years" />
             <Stat n="50+" l="Conditions" />
-          </div>
+          </motion.div>
         </div>
       </div>
 

@@ -141,3 +141,23 @@
 .animate-slide-in-right {
   animation: slideInRight 1s ease-out forwards;
 }
+
+/* Custom Scrollbar for horizontal scrolling elements */
+.custom-scrollbar::-webkit-scrollbar {
+  height: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(181, 168, 149, 0.2); 
+  border-radius: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(181, 168, 149, 0.6); 
+  border-radius: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(181, 168, 149, 0.9); 
+}
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(181, 168, 149, 0.6) rgba(181, 168, 149, 0.2);
+}

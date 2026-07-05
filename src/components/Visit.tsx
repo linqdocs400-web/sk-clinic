@@ -14,17 +14,17 @@ export function Visit() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10 -mt-24 lg:-mt-32 relative">
         <div className="grid lg:grid-cols-2 gap-6 lg:gap-10">
           <div className="bg-cream p-8 sm:p-10 shadow-[0_30px_60px_-30px_rgba(0,0,0,0.25)] space-y-7">
-            <InfoRow icon="pin" title="Address">
+            <InfoRow icon="pin" title="Address" href="https://maps.google.com/?q=Dilsukhnagar+Hyderabad">
               16-11-578/A, Opposite Red Cross Hospital,
               <br />
               Near Raghavendra Hotel, Gaddiannaram Cross Road,
               <br />
               Dilsukhnagar, Hyderabad – 500060
             </InfoRow>
-            <InfoRow icon="phone" title="Phone">
+            <InfoRow icon="phone" title="Phone" href="tel:+918985504044">
               +91 8985504044
             </InfoRow>
-            <InfoRow icon="instagram" title="Instagram">
+            <InfoRow icon="instagram" title="Instagram" href="https://instagram.com/hyderabadi.derma.docs">
               @hyderabadi.derma.docs
             </InfoRow>
             <InfoRow icon="clock" title="Hours">

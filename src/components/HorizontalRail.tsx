@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import { Icon } from "./Icon";
+import { motion } from "framer-motion";
 
 interface HorizontalRailProps {
   id?: string;
@@ -16,38 +17,61 @@ export function HorizontalRail({ id, label, title, children }: HorizontalRailPro
     el.scrollBy({ left: dir * el.clientWidth * 0.8, behavior: "smooth" });
   };
   return (
-    <section id={id} className="py-20 lg:py-28 bg-panel/60">
+    <section id={id} className="py-20 lg:py-28 bg-panel/60 overflow-hidden">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
         <div className="flex flex-wrap items-end justify-between gap-6">
           <div>
-            <div className="font-script text-2xl text-ink-soft">{label}</div>
-            <h2 className="font-display text-4xl sm:text-5xl text-ink mt-2 max-w-xl leading-tight">
+            <motion.div 
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="font-script text-2xl text-ink-soft"
+            >
+              {label}
+            </motion.div>
+            <motion.h2 
+              initial={{ opacity: 0, y: 20, filter: "blur(4px)" }}
+              whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="font-display text-4xl sm:text-5xl text-ink mt-2 max-w-xl leading-tight"
+            >
               {title}
-            </h2>
+            </motion.h2>
           </div>
-          <div className="flex gap-2">
+          <motion.div 
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+            className="flex gap-2"
+          >
             <button
               onClick={() => scroll(-1)}
               aria-label="Previous"
-              className="grid h-11 w-11 place-items-center border border-ink/30 text-ink hover:bg-ink hover:text-cream transition"
+              className="grid h-11 w-11 place-items-center border border-ink/30 text-ink hover:bg-ink hover:text-cream transition rounded-sm"
             >
               <Icon name="arrow-left" className="w-4 h-4" />
             </button>
             <button
               onClick={() => scroll(1)}
               aria-label="Next"
-              className="grid h-11 w-11 place-items-center border border-ink/30 text-ink hover:bg-ink hover:text-cream transition"
+              className="grid h-11 w-11 place-items-center border border-ink/30 text-ink hover:bg-ink hover:text-cream transition rounded-sm"
             >
               <Icon name="arrow-right" className="w-4 h-4" />
             </button>
-          </div>
+          </motion.div>
         </div>
-        <div
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.2, duration: 0.6 }}
           ref={ref}
-          className="mt-10 flex gap-5 overflow-x-auto snap-x snap-mandatory pb-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+          className="mt-10 flex gap-5 overflow-x-auto snap-x snap-mandatory pb-6 custom-scrollbar"
         >
           {children}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

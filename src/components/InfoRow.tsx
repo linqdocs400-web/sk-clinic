@@ -4,12 +4,14 @@ export function InfoRow({
   icon,
   title,
   children,
+  href,
 }: {
   icon: string;
   title: string;
   children: React.ReactNode;
+  href?: string;
 }) {
-  return (
+  const content = (
     <div className="flex gap-4">
       <span className="grid h-10 w-10 shrink-0 place-items-center border border-ink/25 text-ink">
         <Icon name={icon} className="w-4 h-4" />
@@ -20,4 +22,13 @@ export function InfoRow({
       </div>
     </div>
   );
+
+  if (href) {
+    return (
+      <a href={href} target={href.startsWith("http") ? "_blank" : undefined} rel={href.startsWith("http") ? "noopener noreferrer" : undefined} className="block hover:opacity-75 transition-opacity">
+        {content}
+      </a>
+    );
+  }
+  return content;
 }
