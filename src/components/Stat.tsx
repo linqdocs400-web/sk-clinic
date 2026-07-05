@@ -1,4 +1,4 @@
-import { useCounter } from "../../hooks/useCounter";
+import { useCounter } from "../hooks/useCounter";
 
 export function Stat({ n, l }: { n: string; l: string }) {
   const target = parseInt(n.replace(/\D/g, ""));

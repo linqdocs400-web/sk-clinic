@@ -1,5 +1,5 @@
 import { useState, useRef } from "react";
-import { Icon } from "../common/Icon";
+import { Icon } from "./Icon";
 
 export function BeforeAfter() {
   const [pos, setPos] = useState(50);

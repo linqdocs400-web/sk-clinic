@@ -1,4 +1,4 @@
-import { InfoRow } from "../common/InfoRow";
+import { InfoRow } from "./InfoRow";
 
 export function Visit() {
   return (

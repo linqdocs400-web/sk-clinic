@@ -1,5 +1,5 @@
-import doctorImg from "../../assets/doctor.png";
-import { Icon } from "../common/Icon";
+import doctorImg from "../assets/doctor.png";
+import { Icon } from "./Icon";
 
 export function About() {
   return (

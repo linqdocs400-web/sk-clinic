@@ -1,5 +1,13 @@
-import { Icon } from "../common/Icon";
-import { NAV } from "../../data/navigation";
+import { Icon } from "./Icon";
+
+export const NAV = [
+  { label: "About", href: "#about" },
+  { label: "Why Us", href: "#why" },
+  { label: "Conditions", href: "#conditions" },
+  { label: "Treatments", href: "#treatments" },
+  { label: "Results", href: "#results" },
+  { label: "Contact", href: "#contact" },
+];
 
 export function Footer() {
   return (

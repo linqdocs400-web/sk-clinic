@@ -1,6 +1,14 @@
 import { useState } from "react";
 import { Logo } from "./Logo";
-import { NAV } from "../../data/navigation";
+
+export const NAV = [
+  { label: "About", href: "#about" },
+  { label: "Why Us", href: "#why" },
+  { label: "Conditions", href: "#conditions" },
+  { label: "Treatments", href: "#treatments" },
+  { label: "Results", href: "#results" },
+  { label: "Contact", href: "#contact" },
+];
 
 export function Header() {
   const [open, setOpen] = useState(false);

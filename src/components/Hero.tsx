@@ -1,6 +1,15 @@
-import doctorImg from "../../assets/doctor.png";
-import { Stat } from "../common/Stat";
-import { SPECIALTIES } from "../../data/specialties";
+import doctorImg from "../assets/doctor.png";
+import { Stat } from "./Stat";
+
+export const SPECIALTIES = [
+  "Dermatology",
+  "Trichology",
+  "Laser",
+  "Aesthetics",
+  "Dermatosurgery",
+  "Pediatric Skin",
+  "STD Care",
+];
 
 export function Hero() {
   return (
