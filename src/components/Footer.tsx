@@ -30,8 +30,7 @@ export function Footer() {
           </div>
 
           <p className="mt-5 text-sm leading-relaxed max-w-sm">
-            Where skin meets confidence. A premium dermatology clinic offering
-            medical, surgical and aesthetic care in Hyderabad.
+            Siri & Kaushik's Skin, Hair & STD Dermatosurgery & Laser Clinic provides expert dermatology, hair restoration, laser treatments, cosmetic dermatology, and confidential STD care with a patient-first approach.
           </p>
 
           <div className="mt-5 flex gap-2">
@@ -100,7 +99,15 @@ export function Footer() {
                 rel="noopener noreferrer"
                 className="hover:text-white underline underline-offset-2"
               >
-                Dilsukhnagar, Hyderabad – 500060
+                📍 Dilsukhnagar, Hyderabad
+
+                📞 +91 89855 04044
+
+                🕒 Mon–Sat
+                6:30 PM – 9:30 PM
+
+                🕒 Sunday
+                10:00 AM – 2:00 PM
               </a>
             </p>
 
