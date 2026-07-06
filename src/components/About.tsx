@@ -22,15 +22,14 @@ export function About() {
            
           </p>
           <p className="mt-4 text-ink/75 leading-relaxed max-w-md">
-            From advanced laser and dermatosurgery to gentle pediatric care, our clinic brings
-            evidence-based medicine together with the warmth of a personal practice.
+            From acne, pigmentation, psoriasis, vitiligo, eczema, and hair fall to advanced laser procedures, mole and wart removal, cosmetic dermatology, and confidential STD care, patients receive comprehensive treatment using modern technology and a patient-first approach.
           </p>
           <ul className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-8 text-sm text-ink/80">
             {[
-              ["award", "Trained at premier institutes"],
-              ["heart", "Board-certified specialist"],
-              ["microscope", "USFDA-approved lasers"],
-              ["users", "Patient-first philosophy"],
+              ["award", "Experienced Consultant Dermatologist"],
+              ["heart", "Advanced Laser & Dermatosurgery"],
+              ["microscope", "Evidence-Based Treatments"],
+              ["users", "Personalized Patient Care"],
             ].map(([i, t]) => (
               <li key={t} className="flex items-center gap-3">
                 <span className="grid h-7 w-7 place-items-center rounded-full border border-ink/30 text-ink">
