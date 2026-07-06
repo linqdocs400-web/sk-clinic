@@ -1,6 +1,6 @@
 import { InfoRow } from "./InfoRow";
 
-export function Visit Our Clinic() {
+export function Visit() {
   return (
     <section id="contact" className="relative">
       <div className="bg-rose pt-20 pb-32 lg:pt-28 lg:pb-44">
@@ -8,7 +8,7 @@ export function Visit Our Clinic() {
           <div className="font-script text-2xl text-cream/90">visit</div>
 
           <h2 className="font-display mt-2 text-4xl text-cream sm:text-5xl lg:text-6xl">
-           Visit Siri & Kaushik's Skin, Hair & Laser Clinic.
+            Visit Siri & Kaushik's Skin, Hair & Laser Clinic.
           </h2>
         </div>
       </div>
@@ -22,21 +22,25 @@ export function Visit Our Clinic() {
               title="Address"
               href="https://maps.app.goo.gl/bx29btJPjHVVmcPDA"
             >
-                16-11-578/A,
-                Opposite Red Cross Hospital,
-                Gaddiannaram Cross Road,
-                Near Raghavendra Hotel,
-                Dilsukhnagar,
-                Hyderabad – 500060
+              16-11-578/A,
+              <br />
+              Opposite Red Cross Hospital,
+              <br />
+              Gaddiannaram Cross Road,
+              <br />
+              Near Raghavendra Hotel,
+              <br />
+              Dilsukhnagar,
+              <br />
+              Hyderabad – 500060
             </InfoRow>
 
             <InfoRow
               icon="phone"
               title="Phone"
-              href="Call / WhatsApp
-              +91 89855 04044"
+              href="tel:+918985504044"
             >
-              +91 8985504044
+              +91 89855 04044
             </InfoRow>
 
             <InfoRow
@@ -44,21 +48,23 @@ export function Visit Our Clinic() {
               title="Instagram"
               href="https://instagram.com/hyderabadi.derma.docs"
             >
-           Follow Us
-           @hyderabadi.derma.docs
+              <>
+                <span>Follow Us</span>
+                <br />
+                <span>@hyderabadi.derma.docs</span>
+              </>
             </InfoRow>
 
             <InfoRow icon="clock" title="Hours">
-             Monday – Saturday
-             6:30 PM – 9:30 PM
-              <br />
-              Sunday
-              10:00 AM – 2:00 PM
-
-              <br />
-              <span className="text-xs text-ink/50">
-                Appointments only
-              </span>
+              <>
+                <div>Monday – Saturday</div>
+                <div>6:30 PM – 9:30 PM</div>
+                <br />
+                <div>Sunday</div>
+                <div>10:00 AM – 2:00 PM</div>
+                <br />
+                <span className="text-xs text-ink/50">Appointments only</span>
+              </>
             </InfoRow>
           </div>
 
@@ -70,7 +76,7 @@ export function Visit Our Clinic() {
               loading="lazy"
               allowFullScreen
               referrerPolicy="strict-origin-when-cross-origin"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.989557360587!2d78.522059!3d17.3642355!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb99088bacf7ed%3A0x7ce50f18e5e29b8c!2sSiri%20and%20Kaushik%27s%20Skin%20Hair%20STD%20Dermatosurgery%20and%20Laser%20clinic!5e0!3m2!1sen!2sin!4v1783240214398!5m2!1sen!2sin"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.989557360587!2d78.522059!3d17.3642355!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb99088bacf7ed%3A0x7ce50f1[...]"
             />
           </div>
         </div>
