@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Logo } from "./Logo";
 
 export const NAV = [
-  { label: "About", href: "#about" },
+  { label: "Abut", href: "#about" },
   { label: "Why Us", href: "#why" },
   { label: "Conditions", href: "#conditions" },
   { label: "Treatments", href: "#treatments" },
