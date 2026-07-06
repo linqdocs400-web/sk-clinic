@@ -1,42 +1,56 @@
 import { HorizontalRail } from "./HorizontalRail";
 import { motion } from "framer-motion";
+
 import acneImg from "../assets/Acne.jpg";
+import hairImg from "../assets/hair growing stage.jpg";
+import melasmaImg from "../assets/melasama.jpg";
+import tineaImg from "../assets/Tinea capitis.jpg";
+import palmarImg from "../assets/Palmar Psoriasis.jpg";
+import erythrasmaImg from "../assets/Erythrasma Bacterial infection.jpg";
+import allergyImg from "../assets/Allergic Contact Dermatitis.jpg";
 
 export const CONDITIONS = [
   {
-    name: "Acne & Acne",
-    blurb: "Advanced treatment for acne, acne scars, oily skin and enlarged pores.",
+    name: "Acne & Acne Scars",
+    blurb:
+      "Advanced treatment for acne, acne scars, oily skin and enlarged pores.",
     img: acneImg,
   },
   {
     name: "Hair Fall & Hair Regrowth",
-    blurb: "PRP, GFC therapy and personalized solutions for hair loss and thinning.",
-    img: "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=900&auto=format&fit=crop&q=80",
+    blurb:
+      "PRP, GFC therapy and personalized solutions for hair loss and thinning.",
+    img: hairImg,
   },
   {
     name: "Pigmentation & Melasma",
-    blurb: "Treatment for pigmentation, melasma, tanning and uneven skin tone.",
-    img: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=900&auto=format&fit=crop&q=80",
+    blurb:
+      "Treatment for pigmentation, melasma, tanning and uneven skin tone.",
+    img: melasmaImg,
   },
   {
-    name: "Psoriasis & Eczema",
-    blurb: "Comprehensive care for chronic skin conditions with long-term management.",
-    img: "https://images.unsplash.com/photo-1559599101-f09722fb4948?w=900&auto=format&fit=crop&q=80",
+    name: "Tinea Capitis",
+    blurb:
+      "Expert diagnosis and treatment for fungal infections affecting the scalp and hair.",
+    img: tineaImg,
   },
   {
-    name: "Vitiligo",
-    blurb: "Evidence-based treatment plans for pigment restoration and skin health.",
-    img: "https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=900&auto=format&fit=crop&q=80",
+    name: "Palmar Psoriasis",
+    blurb:
+      "Specialized care for psoriasis affecting the palms with advanced treatment options.",
+    img: palmarImg,
   },
   {
-    name: "Laser & Cosmetic Procedures",
-    blurb: "Laser treatments, chemical peels, Hydrafacial and skin rejuvenation.",
-    img: "https://images.unsplash.com/photo-1519415943484-9fa1873496d4?w=900&auto=format&fit=crop&q=80",
+    name: "Erythrasma",
+    blurb:
+      "Accurate diagnosis and effective treatment for bacterial skin infections.",
+    img: erythrasmaImg,
   },
   {
-    name: "STD Consultation & Care",
-    blurb: "Confidential diagnosis, counseling and treatment for sexually transmitted diseases.",
-    img: "https://images.unsplash.com/photo-1584515933487-779824d29309?w=900&auto=format&fit=crop&q=80",
+    name: "Allergic Contact Dermatitis",
+    blurb:
+      "Treatment for allergic skin reactions, itching, redness and inflammation.",
+    img: allergyImg,
   },
 ];
 
@@ -88,4 +102,4 @@ export function Conditions() {
       ))}
     </HorizontalRail>
   );
-} // updated
+}
