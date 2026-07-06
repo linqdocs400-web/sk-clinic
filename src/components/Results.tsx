@@ -5,7 +5,7 @@ export const RESULTS = [
     label: "Hair Transplant",
     meta: "1 SESSION",
     sub: "Receded hairline",
-    img: "https://images.unsplash.com/photo-1582015752624-e8b1c75e3711?w=900&q=70&auto=format&fit=crop",
+    img: "https://in.images.search.yahoo.com/search/images?p=hair+transplantation+pic&fr=mcafee&type=E210IN714G0&imgurl=https%3A%2F%2Fwestmodernclinic.com%2Fwp-content%2Fuploads%2F2023%2F04%2Ffue-hair-transplant-before-and-after-scaled.jpg#id=0&iurl=https%3A%2F%2Fwestmodernclinic.com%2Fwp-content%2Fuploads%2F2023%2F04%2Ffue-hair-transplant-before-and-after-scaled.jpg&action=click",
   },
   {
     label: "Pigmentation Removal",
