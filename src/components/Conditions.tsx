@@ -1,6 +1,6 @@
 import { HorizontalRail } from "./HorizontalRail";
 import { motion } from "framer-motion";
-import acneImg from "../assets/conditions/Acne (1).jpg";
+import acneImg from "../assets/Acne.jpg";
 
 export const CONDITIONS = [
   {
