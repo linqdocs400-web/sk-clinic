@@ -37,7 +37,7 @@ export function Visit() {
 
             <InfoRow
               icon="phone"
-              title="Phone"
+              title="Call / Whatsapp"
               href="tel:+918985504044"
             >
               +91 89855 04044
