@@ -1,6 +1,6 @@
 import { InfoRow } from "./InfoRow";
 
-export function Visit() {
+export function Visit Our Clinic() {
   return (
     <section id="contact" className="relative">
       <div className="bg-rose pt-20 pb-32 lg:pt-28 lg:pb-44">
@@ -8,7 +8,7 @@ export function Visit() {
           <div className="font-script text-2xl text-cream/90">visit</div>
 
           <h2 className="font-display mt-2 text-4xl text-cream sm:text-5xl lg:text-6xl">
-            Find us in Dilsukhnagar.
+           Visit Siri & Kaushik's Skin, Hair & Laser Clinic.
           </h2>
         </div>
       </div>
@@ -22,17 +22,19 @@ export function Visit() {
               title="Address"
               href="https://maps.app.goo.gl/bx29btJPjHVVmcPDA"
             >
-              16-11-578/A, Opposite Red Cross Hospital,
-              <br />
-              Near Raghavendra Hotel, Gaddiannaram Cross Road,
-              <br />
-              Dilsukhnagar, Hyderabad – 500060
+                16-11-578/A,
+                Opposite Red Cross Hospital,
+                Gaddiannaram Cross Road,
+                Near Raghavendra Hotel,
+                Dilsukhnagar,
+                Hyderabad – 500060
             </InfoRow>
 
             <InfoRow
               icon="phone"
               title="Phone"
-              href="tel:+918985504044"
+              href="Call / WhatsApp
+              +91 89855 04044"
             >
               +91 8985504044
             </InfoRow>
@@ -42,13 +44,17 @@ export function Visit() {
               title="Instagram"
               href="https://instagram.com/hyderabadi.derma.docs"
             >
-              @hyderabadi.derma.docs
+           Follow Us
+           @hyderabadi.derma.docs
             </InfoRow>
 
             <InfoRow icon="clock" title="Hours">
-              Mon – Sat · 6:30 PM – 9:30 PM
+             Monday – Saturday
+             6:30 PM – 9:30 PM
               <br />
-              Sunday · 10:00 AM – 2:00 PM
+              Sunday
+              10:00 AM – 2:00 PM
+
               <br />
               <span className="text-xs text-ink/50">
                 Appointments only
