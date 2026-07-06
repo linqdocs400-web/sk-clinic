@@ -11,7 +11,7 @@ export function About() {
             className="font-display text-5xl lg:text-6xl text-ink mt-2 animate-fade-in-right"
             style={{ animationDelay: "0.1s" }}
           >
-            Dr. Koushik
+            Dr. Kous
           </h2>
           <div className="mt-3 text-[11px] tracking-[0.28em] text-ink/60 uppercase">
             MBBS · MD Dermatology · Dermatosurgeon
