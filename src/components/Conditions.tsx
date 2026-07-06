@@ -4,7 +4,7 @@ import acneImg from "../assets/Acne.jpg";
 
 export const CONDITIONS = [
   {
-    name: "Acne & Acne Scars",
+    name: "Acne & Acne",
     blurb: "Advanced treatment for acne, acne scars, oily skin and enlarged pores.",
     img: acneImg,
   },
