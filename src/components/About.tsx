@@ -6,21 +6,20 @@ export function About() {
     <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10 py-20 lg:py-28">
       <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
         <div>
-          <div className="font-script text-2xl text-ink-soft animate-fade-in-right">Hi, I'm</div>
+          <div className="font-script text-2xl text-ink-soft animate-fade-in-right">Meet Your Dermatologist,</div>
           <h2
             className="font-display text-5xl lg:text-6xl text-ink mt-2 animate-fade-in-right"
             style={{ animationDelay: "0.1s" }}
           >
-            Dr. Kous
+           Dr. P. Kaushik Kumar
           </h2>
           <div className="mt-3 text-[11px] tracking-[0.28em] text-ink/60 uppercase">
-            MBBS · MD Dermatology · Dermatosurgeon
+           MBBS (Osmania) • MD Dermatology, Venereology & Leprosy (Osmania) • Consultant Dermatologist & Dermatosurgeon
           </div>
           <div className="mt-6 h-px w-16 bg-ink/30" />
           <p className="mt-6 text-ink/75 leading-relaxed max-w-md">
-            I built Siri &amp; Koushik's as a calm, considered space where modern dermatology meets
-            genuine listening. Every plan we design is shaped to your skin, your story and your
-            goals — never a generic protocol.
+           With expertise in clinical dermatology, dermatosurgery, laser treatments, and hair restoration, Dr. P. Kaushik Kumar is dedicated to providing evidence-based and personalized care.Every treatment plan is carefully designed to address each patient's unique skin and hair concerns.  
+           
           </p>
           <p className="mt-4 text-ink/75 leading-relaxed max-w-md">
             From advanced laser and dermatosurgery to gentle pediatric care, our clinic brings
