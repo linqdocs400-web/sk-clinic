@@ -14,7 +14,7 @@ export function Header() {
   const [open, setOpen] = useState(false);
   return (
     <header className="sticky top-0 z-40 bg-cream/85 backdrop-blur border-b border-ink/5">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10 py-4 grid grid-cols-[minmax(0,1fr)_auto] items-center gap-4 lg:grid-cols-[auto_1fr_auto]">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10 py-4 flex items-center justify-between gap-3 lg:grid lg:grid-cols-[auto_1fr_auto]">
         <Logo />
         <nav className="hidden lg:flex items-center justify-center gap-8 text-sm text-ink/85">
           {NAV.map((n) => (
@@ -23,27 +23,28 @@ export function Header() {
             </a>
           ))}
         </nav>
-        <div className="hidden lg:block">
+        <div className="flex items-center gap-3">
           <a
             href="https://wa.me/918985504044?text=Hi,%20I%20am%20from%20your%20website.%20I%20would%20like%20to%20book%20an%20appointment."
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block bg-ink text-cream text-xs tracking-[0.22em] uppercase px-6 py-3.5 hover:bg-ink-soft transition"
+            className="inline-block bg-ink text-cream text-[9px] sm:text-xs tracking-[0.1em] sm:tracking-[0.22em] uppercase px-3 py-2 sm:px-6 sm:py-3.5 hover:bg-ink-soft transition whitespace-nowrap"
           >
-            Book Appointment
+            <span className="hidden sm:inline">Book Appointment</span>
+            <span className="sm:hidden">Book Now</span>
           </a>
+          <button
+            onClick={() => setOpen((v) => !v)}
+            aria-label="Menu"
+            className="lg:hidden grid h-9 w-9 sm:h-10 sm:w-10 place-items-center rounded border border-ink/15 text-ink shrink-0"
+          >
+            <div className="space-y-1.5">
+              <span className="block h-px w-4 sm:w-5 bg-ink" />
+              <span className="block h-px w-4 sm:w-5 bg-ink" />
+              <span className="block h-px w-4 sm:w-5 bg-ink" />
+            </div>
+          </button>
         </div>
-        <button
-          onClick={() => setOpen((v) => !v)}
-          aria-label="Menu"
-          className="lg:hidden grid h-10 w-10 place-items-center rounded border border-ink/15 text-ink"
-        >
-          <div className="space-y-1.5">
-            <span className="block h-px w-5 bg-ink" />
-            <span className="block h-px w-5 bg-ink" />
-            <span className="block h-px w-5 bg-ink" />
-          </div>
-        </button>
       </div>
       {open && (
         <div className="lg:hidden border-t border-ink/10 bg-cream">
