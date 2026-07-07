@@ -70,88 +70,85 @@ export function Footer() {
           </div>
         </div>
 
-        {/* Quick Links */}
+        {/* Quick Links & Contact Container */}
+        <div className="grid grid-cols-2 gap-6 lg:gap-10 lg:col-span-2">
+          
+          {/* Quick Links */}
+          <div>
+            <div className="text-[11px] uppercase tracking-[0.28em] text-white/60">
+              Quick Links
+            </div>
 
-        <div>
-          <div className="text-[11px] uppercase tracking-[0.28em] text-white/60">
-            Quick Links
+            <ul className="mt-6 space-y-4 text-sm">
+              {NAV.map((n) => (
+                <li key={n.label}>
+                  <a
+                    href={n.href}
+                    className="hover:text-white transition-colors"
+                  >
+                    {n.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
           </div>
 
-          <ul className="mt-6 space-y-4 text-sm">
-            {NAV.map((n) => (
-              <li key={n.label}>
+          {/* Contact */}
+          <div>
+            <div className="text-[11px] uppercase tracking-[0.28em] text-white/60">
+              Contact
+            </div>
+
+            <div className="mt-6 space-y-5 text-sm">
+              <div>
+                <div className="text-white/50 uppercase tracking-widest text-[11px] mb-1">
+                  Address
+                </div>
                 <a
-                  href={n.href}
-                  className="hover:text-white transition-colors"
+                  href="https://maps.app.goo.gl/Z4LYDTPEM5C82Wyk9"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white transition"
                 >
-                  {n.label}
+                  Dilsukhnagar,<br />
+                  Hyderabad – 500060
                 </a>
-              </li>
-            ))}
-          </ul>
-        </div>
+              </div>
 
-        {/* Contact */}
+              <div>
+                <div className="text-white/50 uppercase tracking-widest text-[11px] mb-1">
+                  Call / WhatsApp
+                </div>
+                <a
+                  href="tel:+918985504044"
+                  className="hover:text-white transition"
+                >
+                  +91 89855 04044
+                </a>
+              </div>
 
-        <div>
-          <div className="text-[11px] uppercase tracking-[0.28em] text-white/60">
-            Contact
+              <div>
+                <div className="text-white/50 uppercase tracking-widest text-[11px] mb-1">
+                  Clinic Hours
+                </div>
+                <p>
+                  Monday – Saturday
+                  <br />
+                  6:30 PM – 9:30 PM
+                </p>
+                <p className="mt-2">
+                  Sunday
+                  <br />
+                  10:00 AM – 2:00 PM
+                  <br />
+                  <span className="text-white/60">
+                    (Appointments Only)
+                  </span>
+                </p>
+              </div>
+            </div>
           </div>
-
-          <div className="mt-6 space-y-5 text-sm">
-
-            <div>
-              <div className="text-white/50 uppercase tracking-widest text-[11px] mb-1">
-                Address
-              </div>
-
-              <a
-                href="https://maps.app.goo.gl/Z4LYDTPEM5C82Wyk9"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-white transition"
-              >
-                Dilsukhnagar,<br />
-                Hyderabad – 500060
-              </a>
-            </div>
-
-            <div>
-              <div className="text-white/50 uppercase tracking-widest text-[11px] mb-1">
-                Call / WhatsApp
-              </div>
-
-              <a
-                href="tel:+918985504044"
-                className="hover:text-white transition"
-              >
-                +91 89855 04044
-              </a>
-            </div>
-
-            <div>
-              <div className="text-white/50 uppercase tracking-widest text-[11px] mb-1">
-                Clinic Hours
-              </div>
-
-              <p>
-                Monday – Saturday
-                <br />
-                6:30 PM – 9:30 PM
-              </p>
-
-              <p className="mt-2">
-                Sunday
-                <br />
-                10:00 AM – 2:00 PM
-                <br />
-                <span className="text-white/60">
-                  (Appointments Only)
-                </span>
-              </p>
-            </div>
-
-          </div>
+          
         </div>
 
       </div>
