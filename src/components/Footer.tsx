@@ -161,9 +161,14 @@ export function Footer() {
       </div>
 
       <div className="border-t border-white/10">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10 py-6 text-center text-xs text-white/50">
-          © {new Date().getFullYear()} Siri &amp; Kaushik's Skin, Hair, STD
-          Dermatosurgery &amp; Laser Clinic. All Rights Reserved.
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10 py-3 lg:py-6 text-center text-[10px] lg:text-xs text-white/50">
+          <span className="lg:hidden">
+            © {new Date().getFullYear()} Siri &amp; Kaushik's Clinic. All Rights Reserved.
+          </span>
+          <span className="hidden lg:inline">
+            © {new Date().getFullYear()} Siri &amp; Kaushik's Skin, Hair, STD
+            Dermatosurgery &amp; Laser Clinic. All Rights Reserved.
+          </span>
         </div>
       </div>
     </footer>
