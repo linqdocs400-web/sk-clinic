@@ -1,12 +1,12 @@
 import { HorizontalRail } from "./HorizontalRail";
 import { motion } from "framer-motion";
 
-import acneImg from "../assets/Acne.jpg";
-import hairImg from "../assets/hair growing stage.jpg";
-import melasmaImg from "../assets/melasama.jpg";
-import tineaImg from "../assets/Tinea capitis.jpg";
-import palmarImg from "../assets/Palmar Psoriasis.jpg";
-import erythrasmaImg from "../assets/Erythrasma Bacterial infection.jpg";
+import acneImg from "../assets/acne.jpg";
+import hairImg from "../assets/hair.jpg";
+import melasmaImg from "../assets/melasma.jpg";
+import tineaImg from "../assets/tinea.jpg";
+import palmarImg from "../assets/palmar.jpg";
+import erythrasmaImg from "../assets/erythrasma.jpg";
 import allergyImg from "../assets/Allergic Contact Dermatitis.jpg";
 
 export const CONDITIONS = [
