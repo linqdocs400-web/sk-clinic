@@ -10,7 +10,7 @@ import allergyResult from "../assets/allergy-results.jpg";
 
 export const RESULTS = [
   {
-    label: "Acne & Acne Scars",
+    label: "Acne & Acne Scar",
     meta: "6 WEEKS",
     sub: "Visible reduction in acne, acne scars and healthier skin.",
     img: acneResult,
