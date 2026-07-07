@@ -5,10 +5,10 @@ import { motion, AnimatePresence } from "framer-motion";
 // Asset imports (using placeholders where necessary, update as needed)
 import hairBefore from "../assets/before.png";
 import hairAfter from "../assets/after.png";
-import acneBefore from "../assets/acne.png";
-import acneAfter from "../assets/result1.png"; // Placeholder
-import allergyBefore from "../assets/melasma.png"; // Placeholder
-import allergyAfter from "../assets/result2.png"; // Placeholder
+import acneBefore from "../assets/Acne before.png";
+import acneAfter from "../assets/acne after.png";
+import allergyBefore from "../assets/skin before.png";
+import allergyAfter from "../assets/skin after.png";
 
 const CATEGORIES = [
   { id: "hair", label: "Hair Restoration", before: hairBefore, after: hairAfter },
