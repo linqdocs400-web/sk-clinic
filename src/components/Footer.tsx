@@ -114,19 +114,6 @@ export function Footer() {
                   Hyderabad – 500060
                 </a>
               </div>
-
-              <div>
-                <div className="text-white/50 uppercase tracking-widest text-[11px] mb-1">
-                  Call / WhatsApp
-                </div>
-                <a
-                  href="tel:+918985504044"
-                  className="hover:text-white transition"
-                >
-                  +91 89855 04044
-                </a>
-              </div>
-
               <div>
                 <div className="text-white/50 uppercase tracking-widest text-[11px] mb-1">
                   Clinic Hours
