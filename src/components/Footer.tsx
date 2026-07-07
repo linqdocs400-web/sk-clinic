@@ -111,10 +111,6 @@ export function Footer() {
                 rel="noopener noreferrer"
                 className="hover:text-white transition"
               >
-                16-11-578/A,<br />
-                Opposite Red Cross Hospital,<br />
-                Near Raghavendra Hotel,<br />
-                Gaddiannaram Cross Road,<br />
                 Dilsukhnagar,<br />
                 Hyderabad – 500060
               </a>
