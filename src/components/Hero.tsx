@@ -74,7 +74,7 @@ export function Hero() {
             <motion.h1
               variants={fadeUpVariant}
               
-            >className="font-display text-[40px] sm:text-6xl lg:text-7xl leading-[1.02] text-ink mt-2 tracking-tight"
+            >className="font-display text-[42px] sm:text-6xl lg:text-7xl leading-[1.05] text-ink mt-2 tracking-tight font-normal"
               Advanced Skin, Hair
               <br className="hidden sm:block" /> &amp; Laser Care
             </motion.h1>
