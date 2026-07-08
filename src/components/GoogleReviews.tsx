@@ -36,7 +36,7 @@ const REVIEWS = [
 ];
 
 export function GoogleReviews() {
-  const containerRef = useAutoScroll(0.8);
+ const containerRef = useAutoScroll(0.35);
 
   return (
     <section className="py-20 lg:py-28 bg-sage overflow-hidden">
@@ -86,10 +86,13 @@ export function GoogleReviews() {
             <div
               className="flex gap-6 min-w-max"
             >
-              {[...REVIEWS, ...REVIEWS, ...REVIEWS, ...REVIEWS].map((review, i) => (
-                <div 
-                  key={i} 
-                  className="bg-cream border border-ink/10 p-7 w-[300px] sm:w-[380px] shrink-0 shadow-sm hover:shadow-md transition-shadow duration-300 snap-center rounded-2xl"
+              {REVIEWS.map((review, i) => (
+               <a
+                 key={i}
+                 href="https://maps.app.goo.gl/bx29btJPjHVVmcPDA"
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 className="bg-cream border border-ink/10 p-7 w-[300px] sm:w-[380px] shrink-0 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 snap-center rounded-2xl block cursor-pointer"
                 >
                   <div className="flex items-center gap-4">
                     <div className="w-12 h-12 rounded-full bg-ink text-cream flex items-center justify-center font-display text-xl">
@@ -115,7 +118,7 @@ export function GoogleReviews() {
                   <p className="mt-3 text-sm text-ink/75 leading-relaxed">
                     "{review.text}"
                   </p>
-                </div>
+                </a>
               ))}
             </div>
           </div>
