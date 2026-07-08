@@ -12,8 +12,6 @@ export const SPECIALTIES = [
   "STD Care",
 ];
 
-const BOOK_APPOINTMENT_URL = "https://tally.so/r/Bz5oxe";
-
 const fadeUpVariant = {
   hidden: { opacity: 0, y: 30, filter: "blur(4px)" },
   visible: {
@@ -34,7 +32,6 @@ export function Hero() {
     <section id="about" className="relative overflow-hidden">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10 pt-10 lg:pt-16">
         <div className="grid lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] gap-10 lg:gap-14 items-end">
-
           {/* Portrait */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
@@ -122,7 +119,7 @@ export function Hero() {
               <motion.a
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                href={BOOK_APPOINTMENT_URL}
+                href="https://tally.so/r/Bz5oxe"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-ink text-cream text-xs tracking-[0.22em] uppercase px-7 py-4 hover:bg-ink-soft transition inline-block"
@@ -143,7 +140,6 @@ export function Hero() {
         </div>
       </div>
 
-      {/* Rose stat band */}
       <div className="bg-rose mt-12 lg:-mt-32 lg:pt-40 lg:pb-12 py-10 lg:relative lg:z-[-1]">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10 lg:pl-[42%]">
           <motion.div
@@ -160,7 +156,6 @@ export function Hero() {
         </div>
       </div>
 
-      {/* Specialty marquee */}
       <div className="bg-rose/30 border-y border-ink/5">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10 py-5 overflow-hidden">
           <div className="flex items-center gap-8 sm:gap-12 text-ink font-display text-lg sm:text-xl whitespace-nowrap animate-[marquee_28s_linear_infinite]">
@@ -176,8 +171,12 @@ export function Hero() {
 
       <style>{`
         @keyframes marquee {
-          from { transform: translateX(0); }
-          to { transform: translateX(-50%); }
+          from {
+            transform: translateX(0);
+          }
+          to {
+            transform: translateX(-50%);
+          }
         }
       `}</style>
     </section>
