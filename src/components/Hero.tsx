@@ -70,11 +70,11 @@ export function Hero() {
             animate="visible"
             className="pb-10 lg:pb-16"
           >
-            <motion.div variants={fadeUpVariant} className="font-script text-3xl text-ink-soft">welcome</motion.div>
+            <motion.div variants={fadeUpVariant} className="font-script text-4xl text-ink opacity-75">welcome</motion.div>
             <motion.h1
               variants={fadeUpVariant}
-              className="font-display text-[40px] sm:text-6xl lg:text-7xl leading-[1.02] text-ink mt-2 tracking-tight"
-            >
+              
+            >className="font-display text-[40px] sm:text-6xl lg:text-7xl leading-[1.02] text-ink mt-2 tracking-tight"
               Advanced Skin, Hair
               <br className="hidden sm:block" /> &amp; Laser Care
             </motion.h1>
@@ -82,7 +82,7 @@ export function Hero() {
               variants={fadeUpVariant}
               className="font-script text-3xl sm:text-4xl text-ink-soft/90 mt-3"
             >
-              for every stage of life.
+              Expert care for every stage of life.
             </motion.div>
             <motion.p
               variants={fadeUpVariant}
