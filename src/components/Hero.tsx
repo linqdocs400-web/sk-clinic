@@ -98,7 +98,7 @@ export function Hero() {
               <motion.a
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                href="https://wa.me/918985504044?text=Hi,%20I%20am%20from%20your%20website.%20I%20would%20like%20to%20book%20an%20appointment."
+                href="https://tally.so/r/Bz5oxe"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-ink text-cream text-xs tracking-[0.22em] uppercase px-7 py-4 hover:bg-ink-soft transition inline-block"

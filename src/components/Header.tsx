@@ -38,7 +38,7 @@ export function Header() {
             className="inline-block bg-ink text-cream text-[9px] sm:text-xs tracking-[0.1em] sm:tracking-[0.22em] uppercase px-3 py-2 sm:px-6 sm:py-3.5 hover:bg-ink-soft transition whitespace-nowrap"
           >
             <span className="hidden sm:inline">Book Appointment</span>
-            <span className="sm:hidden">Book Now</span>
+            <span className="sm:hidden">Book Appointment</span>
           </a>
 
           <button
