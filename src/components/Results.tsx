@@ -57,8 +57,8 @@ export function Results() {
   return (
     <HorizontalRail
       id="results"
-      label="Patient Results"
-      title="Real Patient Transformations"
+      label="Success Stories"
+      title="Patient Transformationss"
     >
       {RESULTS.map((r) => (
         <article
