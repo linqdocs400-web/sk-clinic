@@ -128,9 +128,9 @@ export function Hero() {
             transition={{ duration: 0.6 }}
             className="flex flex-wrap gap-8 sm:gap-14 text-cream"
           >
-            <Stat n="7k+" l="Patients" />
-            <Stat n="15+" l="Years" />
-            <Stat n="50+" l="Conditions" />
+            <Stat n="7,000+" l="Patients Treated" />
+            <Stat n="100+" l="Advanced Treatments" />
+           <Stat n="4.9★" l="Google Rating" />
           </motion.div>
         </div>
       </div>
