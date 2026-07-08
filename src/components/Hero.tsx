@@ -53,9 +53,9 @@ export function Hero() {
               transition={{ delay: 0.6, duration: 0.8 }}
               className="absolute -bottom-5 -left-2 lg:left-6 bg-cream shadow-[0_18px_40px_-20px_rgba(0,0,0,0.25)] p-4 pr-6 max-w-[260px] hidden sm:block"
             >
-              <div className="text-[oklch(0.72_0.08_70)] tracking-widest">★★★★★</div>
+              <div className="text-[oklch(0.72_0.08_70)] tracking-widest">⭐ 4.9/5 Patient Rating</div>
               <p className="mt-2 text-[13px] leading-snug text-ink/90">
-                "Genuinely the most thoughtful dermatologist I've met."
+               "Professional, caring, and highly recommended for skin & hair treatments."
               </p>
               <div className="mt-2 text-[10px] tracking-[0.24em] text-ink/55">
                 — VERIFIED PATIENT
