@@ -18,7 +18,7 @@ export function Header() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10 py-4 flex items-center justify-between gap-3 lg:grid lg:grid-cols-[auto_1fr_auto]">
         <Logo />
 
-        <nav className="hidden lg:flex items-center justify-center gap-8 text-sm text-ink/85">
+        <nav className="hidden lg:flex items-center justify-center gap- text-sm text-ink/85">
           {NAV.map((n) => (
             <a
               key={n.label}
