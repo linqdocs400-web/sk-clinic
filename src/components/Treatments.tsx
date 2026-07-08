@@ -9,10 +9,8 @@ export const TREATMENT_GROUPS = [
       "Eczema & Dermatitis",
       "Skin Allergy & Urticaria",
       "Vitiligo Treatment",
-      "Mole, Wart & Skin Tag Removal",
     ],
   },
-
   {
     title: "Hair & Scalp Care",
     icon: "sparkle",
@@ -25,7 +23,6 @@ export const TREATMENT_GROUPS = [
       "Dandruff & Scalp Care",
     ],
   },
-
   {
     title: "Laser Treatments",
     icon: "flask",
@@ -38,7 +35,6 @@ export const TREATMENT_GROUPS = [
       "Laser Skin Resurfacing",
     ],
   },
-
   {
     title: "Aesthetic Dermatology",
     icon: "gem",
@@ -49,19 +45,6 @@ export const TREATMENT_GROUPS = [
       "Skin Boosters",
       "Anti-Aging Treatments",
       "Skin Rejuvenation Procedures",
-    ],
-  },
-
-  {
-    title: "STD & Sexual Health",
-    icon: "heart",
-    items: [
-      "Confidential Consultation",
-      "STD Diagnosis",
-      "STD Treatment",
-      "Genital Wart Treatment",
-      "HIV Counselling",
-      "Follow-up Care",
     ],
   },
 ];
