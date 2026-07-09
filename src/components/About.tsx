@@ -1,4 +1,6 @@
 import doctorImg from "../assets/doctor.png";
+import Inside1 from "../assets/Inside1.jpeg";
+import Inside2 from "../assets/Inside2.jpeg";
 import { Icon } from "./Icon";
 
 export function About() {
@@ -47,15 +49,15 @@ export function About() {
             className="col-span-4 row-span-6 col-start-2 row-start-1 object-cover w-full h-full animate-pop-in"
           />
           <img
-            src="https://images.unsplash.com/photo-1612458927360-a3ca0a201bc3?w=600&q=70&auto=format&fit=crop"
-            alt="Treatment result"
+            src={Inside1}
+            alt="Clinic Interior"
             className="col-span-2 row-span-2 col-start-5 row-start-1 object-cover w-full h-full shadow-lg animate-pop-in"
             loading="lazy"
             style={{ animationDelay: "0.2s" }}
           />
           <img
-            src="https://images.unsplash.com/photo-1559599189-fe84dea4eb79?w=600&q=70&auto=format&fit=crop"
-            alt="Hair restoration"
+            src={Inside2}
+            alt="Clinic Interior"
             className="col-span-2 row-span-2 col-start-1 row-start-5 object-cover w-full h-full shadow-lg animate-pop-in"
             loading="lazy"
             style={{ animationDelay: "0.4s" }}

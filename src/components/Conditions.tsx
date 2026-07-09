@@ -1,5 +1,6 @@
 import { HorizontalRail } from "./HorizontalRail";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 import acneImg from "../assets/acne.jpg";
 import hairImg from "../assets/hair.jpg";
@@ -92,12 +93,12 @@ export function Conditions() {
             {c.blurb}
           </p>
 
-          <a
-            href="#contact"
+          <Link
+            to="/book"
             className="mt-3 inline-block text-[11px] tracking-[0.28em] uppercase text-ink group-hover:text-ink-soft transition-colors"
           >
             Book Consultation →
-          </a>
+          </Link>
         </motion.article>
       ))}
     </HorizontalRail>
