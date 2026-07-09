@@ -3,12 +3,12 @@ import { Icon } from "./Icon";
 import { motion, AnimatePresence } from "framer-motion";
 
 // Asset imports (using placeholders where necessary, update as needed)
-import hairBefore from "../assets/before.png";
-import hairAfter from "../assets/after.png";
-import acneBefore from "../assets/Acne before.png";
-import acneAfter from "../assets/acne after.png";
-import allergyBefore from "../assets/skin before.png";
-import allergyAfter from "../assets/skin after.png";
+import hairBefore from "../assets/before.jpeg";
+import hairAfter from "../assets/after.jpeg";
+import acneBefore from "../assets/acne before.jpeg";
+import acneAfter from "../assets/acne after.jpeg";
+import allergyBefore from "../assets/skin before.jpeg";
+import allergyAfter from "../assets/skin after.jpeg";
 
 const CATEGORIES = [
   { id: "hair", label: "Hair Restoration", before: hairBefore, after: hairAfter },
