@@ -60,13 +60,13 @@ export function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6, duration: 0.8 }}
-              className="absolute -bottom-5 -left-2 lg:left-6 bg-cream shadow-[0_18px_40px_-20px_rgba(0,0,0,0.25)] p-4 pr-6 max-w-[260px] hidden sm:block"
+              className="absolute -bottom-5 left-4 right-4 sm:right-auto sm:-left-2 lg:left-6 bg-cream shadow-[0_18px_40px_-20px_rgba(0,0,0,0.25)] p-3 sm:p-4 pr-4 sm:pr-6 max-w-[280px] mx-auto sm:mx-0 z-10"
             >
-              <div className="text-[oklch(0.72_0.08_70)] tracking-widest">⭐ 4.9/5 Patient Rating</div>
-              <p className="mt-2 text-[13px] leading-snug text-ink/90">
+              <div className="text-[oklch(0.72_0.08_70)] tracking-widest text-[10px] sm:text-xs">⭐ 4.9/5 Patient Rating</div>
+              <p className="mt-1 sm:mt-2 text-[11px] sm:text-[13px] leading-snug text-ink/90">
                "Professional, caring, and highly recommended for skin & hair treatments."
               </p>
-              <div className="mt-2 text-[10px] tracking-[0.24em] text-ink/55">
+              <div className="mt-1 sm:mt-2 text-[9px] sm:text-[10px] tracking-[0.24em] text-ink/55">
                 — VERIFIED PATIENT
               </div>
             </motion.div>

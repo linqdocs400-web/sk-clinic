@@ -1,6 +1,4 @@
 import doctorImg from "../assets/doctor.png";
-import Inside1 from "../assets/Inside1.jpeg";
-import Inside2 from "../assets/Inside2.jpeg";
 import { Icon } from "./Icon";
 
 export function About() {
@@ -41,25 +39,11 @@ export function About() {
             ))}
           </ul>
         </div>
-        <div className="relative grid grid-cols-6 grid-rows-6 gap-3 min-h-[380px] lg:min-h-[520px] py-4">
+        <div className="relative flex items-center justify-center py-4">
           <img
             src={doctorImg}
             alt="Dr. Koushik in clinic"
-            className="col-span-4 row-span-5 col-start-2 row-start-1 lg:row-start-2 object-cover w-full h-full rounded-2xl animate-pop-in"
-          />
-          <img
-            src={Inside1}
-            alt="Clinic Interior"
-            className="relative z-10 col-span-3 row-span-2 col-start-4 row-start-1 object-cover w-full h-full rounded-xl border-[6px] border-cream shadow-xl animate-pop-in"
-            loading="lazy"
-            style={{ animationDelay: "0.2s" }}
-          />
-          <img
-            src={Inside2}
-            alt="Clinic Interior"
-            className="relative z-10 col-span-3 row-span-2 col-start-1 row-start-5 object-cover w-full h-full rounded-xl border-[6px] border-cream shadow-xl animate-pop-in"
-            loading="lazy"
-            style={{ animationDelay: "0.4s" }}
+            className="w-[85%] max-w-[400px] lg:max-w-[450px] aspect-[4/5] object-cover object-top rounded-3xl shadow-xl animate-pop-in"
           />
         </div>
       </div>
