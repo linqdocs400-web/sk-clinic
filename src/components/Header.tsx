@@ -39,7 +39,7 @@ export function Header() {
 
           <Link 
             to="/book"
-            className="bg-ink text-cream uppercase tracking-[0.22em] text-xs px-7 py-4 hover:bg-ink-soft transition"
+            className="bg-ink text-cream uppercase tracking-[0.15em] sm:tracking-[0.22em] text-[10px] sm:text-xs px-4 py-3 sm:px-7 sm:py-4 hover:bg-ink-soft transition"
           >
             Book Appointment
           </Link>
