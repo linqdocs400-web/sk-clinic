@@ -7,8 +7,7 @@
 
 <motion.h1
   variants={fadeUpVariant}
-  className="font-display text-[42px] sm:text-6xl lg:text-7xl leading-[1.05] text-ink mt-2 tracking-tight font-normal"
->
+  className="font-display text-[42px] sm:text-6xl lg:text-7xl leading-[1.05] text-ink mt-2 tracking-tight font-normal">
   Advanced Dermatology,
   <br className="hidden sm:block" />
   Hair &amp; Laser Care
