@@ -4,13 +4,13 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
 export const SPECIALTIES = [
-  "Dermatology",
-  "Trichology",
-  "Laser",
-  "Aesthetics",
-  "Dermatosurgery",
-  "Pediatric Skin",
-  "STD Care",
+  "Acne Treatment",
+  "Hair Loss Treatment",
+  "Pigmentation Treatment",
+  "Laser Hair Reduction",
+  "Botox & Fillers",
+  "Skin Rejuvenation",
+  "STD Treatment",
 ];
 
 const fadeUpVariant = {
@@ -147,7 +147,7 @@ export function Hero() {
       {/* Specialty marquee */}
       <div className="bg-rose/30 border-y border-ink/5">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10 py-5 overflow-hidden">
-          <div className="flex items-center gap-8 sm:gap-12 text-ink font-display text-lg sm:text-xl whitespace-nowrap animate-[marquee_28s_linear_infinite]">
+          <div className="flex items-center gap-8 sm:gap-12 text-ink font-display text-lg sm:text-xl whitespace-nowrap animate-[marquee_40s_linear_infinite]">
             {[...SPECIALTIES, ...SPECIALTIES].map((s, i) => (
               <span key={i} className="flex items-center gap-8 sm:gap-12">
                 <span className="italic">{s}</span>
