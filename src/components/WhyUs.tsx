@@ -1,6 +1,5 @@
 import { SectionLabel } from "./SectionLabel";
 import { Icon } from "./Icon";
-import { useAutoScroll } from "../hooks/useAutoScroll";
 
 export const REASONS = [
   { t: "Experienced Consultant Dermatologists", i: "stethoscope" },
@@ -16,9 +15,6 @@ export const REASONS = [
 ];
 
 export function WhyUs() {
-  // Pass a custom speed to the auto-scroll hook
-  const scrollRef = useAutoScroll(0.8);
-
   return (
     <section id="why">
       <SectionLabel>why us ?</SectionLabel>
@@ -33,10 +29,9 @@ export function WhyUs() {
           
           {/* Mobile Auto-Scrolling View */}
           <div 
-            className="mt-12 lg:hidden bg-ink/10 border border-ink/10 max-w-6xl mx-auto overflow-x-auto pb-6 custom-scrollbar touch-pan-x"
-            ref={scrollRef as any}
+            className="mt-12 lg:hidden bg-ink/10 border border-ink/10 max-w-6xl mx-auto overflow-hidden pb-6"
           >
-            <div className="flex gap-px min-w-max">
+            <div className="flex gap-px w-max animate-[marquee_50s_linear_infinite]">
               {[...REASONS, ...REASONS, ...REASONS].map((r, index) => (
                 <div
                   key={index}

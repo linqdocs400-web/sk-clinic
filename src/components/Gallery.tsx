@@ -23,7 +23,7 @@ export function Gallery() {
             <div
               key={i}
               className={`group overflow-hidden rounded-sm bg-ink/10 ${
-                i === 2 ? "row-span-2 aspect-[3/4]" : "aspect-square"
+                i === 2 ? "row-span-2 aspect-[3/4]" : i === 5 ? "col-span-2 aspect-[2/1]" : "aspect-square"
               }`}
             >
               <img
