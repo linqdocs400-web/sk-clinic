@@ -161,5 +161,3 @@ export function Hero() {
   );
 }
 
-=======
->>>>>>> b16ae7d3bf42622c8d91fb29abe0973320e450a5
