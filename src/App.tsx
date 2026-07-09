@@ -1,3 +1,4 @@
+import { Routes, Route } from "react-router-dom";
 import { TopBar } from "./components/TopBar";
 import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
@@ -12,10 +13,11 @@ import { BeforeAfter } from "./components/BeforeAfter";
 import { GoogleReviews } from "./components/GoogleReviews";
 import { Gallery } from "./components/Gallery";
 import { Visit } from "./components/Visit";
+import { BookAppointment } from "./pages/BookAppointment";
 
-export function App() {
+function HomePage() {
   return (
-    <div className="min-h-screen bg-cream text-foreground">
+    <>
       <TopBar />
       <Header />
       <Hero />
@@ -30,6 +32,17 @@ export function App() {
       <Visit />
       <Footer />
       <FloatingChat />
+    </>
+  );
+}
+
+export function App() {
+  return (
+    <div className="min-h-screen bg-cream text-foreground">
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/book" element={<BookAppointment />} />
+      </Routes>
     </div>
   );
 }

@@ -1,6 +1,7 @@
 import doctorImg from "../assets/doctor.png";
 import { Stat } from "./Stat";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 export const SPECIALTIES = [
   "Dermatology",
@@ -104,16 +105,15 @@ export function Hero() {
               variants={fadeUpVariant}
               className="mt-8 flex flex-wrap gap-3"
             >
-              <motion.a
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                href="https://tally.so/r/Bz5oxe"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-ink text-cream text-xs tracking-[0.22em] uppercase px-7 py-4 hover:bg-ink-soft transition inline-block"
-              >
-                Book Appointment
-              </motion.a>
+              <Link to="/book" className="inline-block">
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="bg-ink text-cream text-xs tracking-[0.22em] uppercase px-7 py-4 hover:bg-ink-soft transition"
+                >
+                  Book Appointment
+                </motion.div>
+              </Link>
               <motion.a
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}

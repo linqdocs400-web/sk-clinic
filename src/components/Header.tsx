@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Logo } from "./Logo";
+import { Link } from "react-router-dom";
 
 export const NAV = [
   { label: "Home", href: "#about" },
@@ -36,14 +37,12 @@ export function Header() {
         {/* Right Side */}
         <div className="flex items-center gap-3">
 
-          <a
-            href="https://tally.so/r/Bz5oxe"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link 
+            to="/book"
             className="bg-ink text-cream uppercase tracking-[0.22em] text-xs px-7 py-4 hover:bg-ink-soft transition"
           >
             Book Appointment
-          </a>
+          </Link>
 
           <button
             onClick={() => setOpen(!open)}
@@ -75,15 +74,13 @@ export function Header() {
               </a>
             ))}
 
-            <a
-              href="https://tally.so/r/Bz5oxe"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link 
+              to="/book"
               onClick={() => setOpen(false)}
-              className="mt-2 bg-ink text-cream text-center uppercase tracking-[0.22em] text-xs px-6 py-4"
+              className="mt-2 bg-ink text-cream text-center uppercase tracking-[0.22em] text-xs px-6 py-4 block"
             >
               Book Appointment
-            </a>
+            </Link>
 
           </div>
         </div>

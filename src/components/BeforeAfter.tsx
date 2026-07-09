@@ -97,14 +97,14 @@ export function BeforeAfter() {
             >
               <img
                 src={activeTab.after}
-                alt={`After ${activeTab.label}`}
+                alt={`After treatment for ${activeTab.label} at Siri & Koushik's Clinic in Hyderabad`}
                 className="absolute inset-0 w-full h-full object-cover"
                 draggable={false}
               />
               <div className="absolute inset-0 overflow-hidden" style={{ width: `${pos}%` }}>
                 <img
                   src={activeTab.before}
-                  alt={`Before ${activeTab.label}`}
+                  alt={`Before treatment for ${activeTab.label} at Siri & Koushik's Clinic in Hyderabad`}
                   className="absolute inset-0 h-full w-[100vw] max-w-none object-cover"
                   style={{ width: `${100 / (pos / 100)}%` }}
                   draggable={false}

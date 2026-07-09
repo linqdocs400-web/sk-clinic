@@ -68,7 +68,7 @@ export function Results() {
           <div className="aspect-[4/3] overflow-hidden rounded-xl bg-ink/10">
             <img
               src={r.img}
-              alt={r.label}
+              alt={`Successful treatment results for ${r.label} at Siri & Koushik's Clinic, Dermatologist in Hyderabad`}
               loading="lazy"
               className="w-full h-full object-cover"
             />
