@@ -1,33 +1,36 @@
-<motion.div
-  variants={fadeUpVariant}
-  className="font-script text-4xl text-ink opacity-75"
->
-  welcome
-</motion.div>
+import doctorImg from "../assets/doctor.png";
+import { Stat } from "./Stat";
+import { motion } from "framer-motion";
 
-<motion.h1
-  variants={fadeUpVariant}
-  className="font-display text-[42px] sm:text-6xl lg:text-7xl leading-[1.05] text-ink mt-2 tracking-tight font-normal">
-  Advanced Dermatology,
-  <br className="hidden sm:block" />
-  Hair &amp; Laser Care
-</motion.h1>
+export const SPECIALTIES = [
+  "Dermatology",
+  "Trichology",
+  "Laser",
+  "Aesthetics",
+  "Dermatosurgery",
+  "Pediatric Skin",
+  "STD Care",
+];
 
-<motion.div
-  variants={fadeUpVariant}
-  className="font-script text-3xl sm:text-4xl text-ink opacity-80 mt-3"
->
-  Expert care for every stage of life.
-</motion.div>
+const fadeUpVariant = {
+  hidden: { opacity: 0, y: 30, filter: "blur(4px)" },
+  visible: {
+    opacity: 1,
+    y: 0,
+    filter: "blur(0px)",
+    transition: { duration: 0.8, ease: "easeOut" },
+  },
+};
 
-<motion.p
-  variants={fadeUpVariant}
-  className="mt-6 max-w-xl text-ink/85 text-[15px] leading-relaxed"
->
-  Comprehensive skin, hair, laser &amp; STD care with personalized treatment
-  plans, advanced technology, and trusted expertise for every patient.
-</motion.p>
+const staggerContainer = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { staggerChildren: 0.15 },
+  },
+};
 
+export function Hero() {
 export function Hero() {
   return (
     <section id="about" className="relative overflow-hidden">
