@@ -31,7 +31,6 @@ const staggerContainer = {
 };
 
 export function Hero() {
-export function Hero() {
   return (
     <section id="about" className="relative overflow-hidden">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10 pt-10 lg:pt-16">
@@ -80,9 +79,6 @@ export function Hero() {
             className="pb-10 lg:pb-16"
           >
             <motion.div variants={fadeUpVariant} className="font-script text-4xl text-ink opacity-75">welcome</motion.div>
-            <motion.h1
-              variants={fadeUpVariant}
-              
             <motion.h1
               variants={fadeUpVariant}
               className="font-display text-[42px] sm:text-6xl lg:text-7xl leading-[1.05] text-ink mt-2 tracking-tight font-normal"
