@@ -38,7 +38,7 @@ export function Gallery() {
                   touchAction: "manipulation",
                   backfaceVisibility: "hidden",
                   transform: "translateZ(0)",
-                }}
+                } as any}
               />
             </div>
           ))}
@@ -69,7 +69,7 @@ export function Gallery() {
                     userSelect: "none",
                     backfaceVisibility: "hidden",
                     transform: "translateZ(0)",
-                  }}
+                  } as any}
                 />
               </div>
             ))}
