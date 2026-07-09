@@ -14,56 +14,62 @@ export function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-40 bg-cream/85 backdrop-blur border-b border-ink/5">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10 py-4 flex items-center justify-between gap-3 lg:grid lg:grid-cols-[auto_1fr_auto]">
+    <header className="sticky top-0 z-40 bg-cream/90 backdrop-blur-md border-b border-ink/5">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10 h-24 flex items-center justify-between">
+
+        {/* Logo */}
         <Logo />
 
-        <nav className="hidden lg:flex items-center justify-center gap- text-sm text-ink/85">
+        {/* Desktop Navigation */}
+        <nav className="hidden lg:flex items-center justify-center space-x-10">
           {NAV.map((n) => (
             <a
               key={n.label}
               href={n.href}
-              className="hover:text-ink transition"
+              className="text-[15px] font-medium tracking-wide text-ink/80 hover:text-ink transition-all duration-300"
             >
               {n.label}
             </a>
           ))}
         </nav>
 
+        {/* Right Side */}
         <div className="flex items-center gap-3">
+
           <a
             href="https://tally.so/r/Bz5oxe"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block bg-ink text-cream text-[9px] sm:text-xs tracking-[0.1em] sm:tracking-[0.22em] uppercase px-3 py-2 sm:px-6 sm:py-3.5 hover:bg-ink-soft transition whitespace-nowrap"
+            className="bg-ink text-cream uppercase tracking-[0.22em] text-xs px-7 py-4 hover:bg-ink-soft transition"
           >
-            <span className="hidden sm:inline">Book Appointment</span>
-            <span className="sm:hidden">Book Appointment</span>
+            Book Appointment
           </a>
 
           <button
-            onClick={() => setOpen((v) => !v)}
+            onClick={() => setOpen(!open)}
             aria-label="Menu"
-            className="lg:hidden grid h-9 w-9 sm:h-10 sm:w-10 place-items-center rounded border border-ink/15 text-ink shrink-0"
+            className="lg:hidden flex flex-col justify-center items-center w-10 h-10 border border-ink/20 rounded"
           >
-            <div className="space-y-1.5">
-              <span className="block h-px w-4 sm:w-5 bg-ink" />
-              <span className="block h-px w-4 sm:w-5 bg-ink" />
-              <span className="block h-px w-4 sm:w-5 bg-ink" />
-            </div>
+            <span className="w-5 h-0.5 bg-ink mb-1"></span>
+            <span className="w-5 h-0.5 bg-ink mb-1"></span>
+            <span className="w-5 h-0.5 bg-ink"></span>
           </button>
+
         </div>
+
       </div>
 
+      {/* Mobile Menu */}
       {open && (
         <div className="lg:hidden border-t border-ink/10 bg-cream">
-          <div className="px-4 py-4 flex flex-col gap-1 text-sm">
+          <div className="flex flex-col px-6 py-5 space-y-4">
+
             {NAV.map((n) => (
               <a
                 key={n.label}
                 href={n.href}
                 onClick={() => setOpen(false)}
-                className="py-2 text-ink/85"
+                className="text-ink/80 hover:text-ink transition"
               >
                 {n.label}
               </a>
@@ -74,10 +80,11 @@ export function Header() {
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setOpen(false)}
-              className="mt-2 text-center bg-ink text-cream text-xs tracking-[0.22em] uppercase px-6 py-3.5"
+              className="mt-2 bg-ink text-cream text-center uppercase tracking-[0.22em] text-xs px-6 py-4"
             >
               Book Appointment
             </a>
+
           </div>
         </div>
       )}
