@@ -9,9 +9,9 @@
   variants={fadeUpVariant}
   className="font-display text-[42px] sm:text-6xl lg:text-7xl leading-[1.05] text-ink mt-2 tracking-tight font-normal"
 >
-  Advanced Skin, Hair
+  Advanced Dermatology,
   <br className="hidden sm:block" />
-  &amp; Laser Care
+  Hair &amp; Laser Care
 </motion.h1>
 
 <motion.div
@@ -25,7 +25,6 @@
   variants={fadeUpVariant}
   className="mt-6 max-w-xl text-ink/85 text-[15px] leading-relaxed"
 >
-  Expert dermatology, hair restoration, laser, cosmetic &amp; STD treatments
-  delivered with precision, compassion, and trusted by thousands of patients
-  across Hyderabad.
+  Comprehensive skin, hair, laser &amp; STD care with personalized treatment
+  plans, advanced technology, and trusted expertise for every patient.
 </motion.p>
