@@ -69,7 +69,7 @@ export function Conditions() {
           transition={{ duration: 0.3 }}
           className="snap-start shrink-0 w-[78%] sm:w-[44%] lg:w-[26%] group cursor-pointer"
         >
-          <div className="relative aspect-[3/4] overflow-hidden rounded-xl bg-ink/10">
+          <div className="relative overflow-hidden rounded-xl bg-ink/10">
             <motion.img
               initial={{ scale: 1.08 }}
               whileInView={{ scale: 1 }}
@@ -79,7 +79,7 @@ export function Conditions() {
               src={c.img}
               alt={c.name}
               loading="lazy"
-              className="w-full h-full object-cover"
+              className="w-full h-auto object-contain bg-black/5"
             />
 
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
