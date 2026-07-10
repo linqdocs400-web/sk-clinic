@@ -70,7 +70,7 @@ export function Results() {
               src={r.img}
               alt={`Successful treatment results for ${r.label} at Siri & Koushik's Clinic, Dermatologist in Hyderabad`}
               loading="lazy"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-contain bg-black/5"
             />
           </div>
 
