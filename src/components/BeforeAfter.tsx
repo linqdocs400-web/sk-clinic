@@ -117,32 +117,49 @@ export function BeforeAfter() {
               exit={{ opacity: 0 }}
               className="absolute inset-0"
             >
-              {/* AFTER */}
+              {/* AFTER IMAGE */}
               <img
                 src={activeTab.after}
-                alt="After"
+                alt={`After treatment for ${activeTab.label}`}
                 draggable={false}
-                className={`absolute inset-0 w-full h-full object-cover scale-110 ${
-                  activeTab.id === "allergy"
-                    ? "object-top"
-                    : "object-center"
-                }`}
+                className="absolute inset-0 w-full h-full object-cover"
+                style={{
+                  transform:
+                    activeTab.id === "hair"
+                      ? "scale(1.9)"
+                      : activeTab.id === "acne"
+                      ? "scale(1.55)"
+                      : "scale(1.45)",
+                  transformOrigin:
+                    activeTab.id === "allergy"
+                      ? "center top"
+                      : "center center",
+                }}
               />
 
-              {/* BEFORE */}
+              {/* BEFORE IMAGE */}
               <div
                 className="absolute inset-0 overflow-hidden"
                 style={{ width: `${pos}%` }}
               >
                 <img
                   src={activeTab.before}
-                  alt="Before"
+                  alt={`Before treatment for ${activeTab.label}`}
                   draggable={false}
-                  className={`absolute inset-0 w-full h-full object-cover scale-110 ${
-                    activeTab.id === "allergy"
-                      ? "object-top"
-                      : "object-center"
-                  }`}
+                  className="absolute inset-0 h-full max-w-none object-cover"
+                  style={{
+                    width: `${100 / (pos / 100)}%`,
+                    transform:
+                      activeTab.id === "hair"
+                        ? "scale(1.9)"
+                        : activeTab.id === "acne"
+                        ? "scale(1.55)"
+                        : "scale(1.45)",
+                    transformOrigin:
+                      activeTab.id === "allergy"
+                        ? "center top"
+                        : "center center",
+                  }}
                 />
               </div>
             </motion.div>
@@ -156,14 +173,10 @@ export function BeforeAfter() {
           <div className="absolute top-4 right-4 bg-white/80 backdrop-blur text-black px-3 py-1 rounded-full text-xs tracking-widest uppercase">
             After
           </div>
-
-          {/* Divider */}
           <div
-            className="absolute top-0 bottom-0 w-[2px] bg-white"
+            className="absolute top-0 bottom-0 w-[3px] bg-white shadow-[0_0_18px_rgba(255,255,255,0.9)]"
             style={{ left: `${pos}%` }}
           />
-
-          {/* Handle */}
           <button
             onPointerDown={drag}
             aria-label="Compare"
