@@ -124,7 +124,7 @@ export function BeforeAfter() {
                 draggable={false}
                 className={`absolute inset-0 w-full h-full object-cover max-lg:scale-100 ${
                   activeTab.id === "hair"
-                    ? "lg:scale-[1.5] origin-center"
+                    ? "lg:scale-[1.35] origin-center"
                     : activeTab.id === "acne"
                     ? "lg:scale-[1.25] origin-center"
                     : "lg:object-top lg:scale-[1.15] origin-top"
@@ -138,7 +138,7 @@ export function BeforeAfter() {
                 draggable={false}
                 className={`absolute inset-0 w-full h-full object-cover max-lg:scale-100 ${
                   activeTab.id === "hair"
-                    ? "lg:scale-[1.5] origin-center"
+                    ? "lg:scale-[1.35] origin-center"
                     : activeTab.id === "acne"
                     ? "lg:scale-[1.25] origin-center"
                     : "lg:object-top lg:scale-[1.15] origin-top"
