@@ -46,9 +46,9 @@ export const RESULTS = [
     img: erythrasmaResult,
   },
   {
-    label: "Allergic Contact Dermatitis",
+    label: "Rosacea",
     meta: "3 WEEKS",
-    sub: "Relief from itching, redness and allergic skin reactions.",
+    sub: "Noticeable relief from redness, inflammation, and facial sensitivity.",
     img: allergyResult,
   },
 ];
