@@ -65,12 +65,12 @@ export function Results() {
           key={r.label}
           className="snap-start shrink-0 w-[78%] sm:w-[44%] lg:w-[26%]"
         >
-          <div className="aspect-[4/3] overflow-hidden rounded-xl bg-ink/10">
+          <div className="overflow-hidden rounded-xl bg-ink/10">
             <img
               src={r.img}
               alt={`Successful treatment results for ${r.label} at Siri & Koushik's Clinic, Dermatologist in Hyderabad`}
               loading="lazy"
-              className="w-full h-full object-contain bg-black/5"
+              className="w-full h-auto object-contain bg-black/5"
             />
           </div>
 
