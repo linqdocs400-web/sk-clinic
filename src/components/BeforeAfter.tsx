@@ -122,19 +122,13 @@ export function BeforeAfter() {
                 src={activeTab.after}
                 alt={`After treatment for ${activeTab.label}`}
                 draggable={false}
-                className="absolute inset-0 w-full h-full object-cover"
-                style={{
-                  transform:
-                    activeTab.id === "hair"
-                      ? "scale(1.9)"
-                      : activeTab.id === "acne"
-                      ? "scale(1.55)"
-                      : "scale(1.45)",
-                  transformOrigin:
-                    activeTab.id === "allergy"
-                      ? "center top"
-                      : "center center",
-                }}
+                className={`absolute inset-0 w-full h-full object-cover transition-transform duration-300 ${
+                  activeTab.id === "hair"
+                    ? "scale-[1.3] lg:scale-[1.7] origin-center"
+                    : activeTab.id === "acne"
+                    ? "scale-[1.4] origin-center"
+                    : "scale-[1.3] origin-top"
+                }`}
               />
 
               {/* BEFORE IMAGE */}
@@ -146,19 +140,15 @@ export function BeforeAfter() {
                   src={activeTab.before}
                   alt={`Before treatment for ${activeTab.label}`}
                   draggable={false}
-                  className="absolute inset-0 h-full max-w-none object-cover"
+                  className={`absolute inset-0 h-full max-w-none object-cover transition-transform duration-300 ${
+                    activeTab.id === "hair"
+                      ? "scale-[1.3] lg:scale-[1.7] origin-center"
+                      : activeTab.id === "acne"
+                      ? "scale-[1.4] origin-center"
+                      : "scale-[1.3] origin-top"
+                  }`}
                   style={{
                     width: `${100 / (pos / 100)}%`,
-                    transform:
-                      activeTab.id === "hair"
-                        ? "scale(1.9)"
-                        : activeTab.id === "acne"
-                        ? "scale(1.55)"
-                        : "scale(1.45)",
-                    transformOrigin:
-                      activeTab.id === "allergy"
-                        ? "center top"
-                        : "center center",
                   }}
                 />
               </div>
