@@ -107,7 +107,7 @@ export function BeforeAfter() {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="relative mt-10 mx-auto w-full max-w-md aspect-[4/5] overflow-hidden rounded-xl shadow-2xl bg-black"
+          className="relative mt-10 mx-auto w-full max-w-md lg:max-w-3xl aspect-[4/5] lg:aspect-[16/10] overflow-hidden rounded-xl shadow-2xl bg-black"
         >
           <AnimatePresence mode="wait">
             <motion.div
