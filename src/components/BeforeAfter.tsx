@@ -127,7 +127,7 @@ export function BeforeAfter() {
                     ? "lg:scale-[1.5] origin-center"
                     : activeTab.id === "acne"
                     ? "lg:scale-[1.25] origin-center"
-                    : "lg:scale-[1.15] origin-top"
+                    : "lg:object-top lg:scale-[1.15] origin-top"
                 }`}
               />
 
@@ -141,7 +141,7 @@ export function BeforeAfter() {
                     ? "lg:scale-[1.5] origin-center"
                     : activeTab.id === "acne"
                     ? "lg:scale-[1.25] origin-center"
-                    : "lg:scale-[1.15] origin-top"
+                    : "lg:object-top lg:scale-[1.15] origin-top"
                 }`}
                 style={{ clipPath: `inset(0 ${100 - pos}% 0 0)` }}
               />
