@@ -122,36 +122,29 @@ export function BeforeAfter() {
                 src={activeTab.after}
                 alt={`After treatment for ${activeTab.label}`}
                 draggable={false}
-                className={`absolute inset-0 w-full h-full object-cover transition-transform duration-300 ${
+                className={`absolute inset-0 w-full h-full object-cover max-lg:scale-100 ${
                   activeTab.id === "hair"
-                    ? "scale-[1.3] lg:scale-[1.7] origin-center"
+                    ? "lg:scale-[1.5] origin-center"
                     : activeTab.id === "acne"
-                    ? "scale-[1.4] origin-center"
-                    : "scale-[1.3] origin-top"
+                    ? "lg:scale-[1.25] origin-center"
+                    : "lg:scale-[1.15] origin-top"
                 }`}
               />
 
               {/* BEFORE IMAGE */}
-              <div
-                className="absolute inset-0 overflow-hidden"
-                style={{ width: `${pos}%` }}
-              >
-                <img
-                  src={activeTab.before}
-                  alt={`Before treatment for ${activeTab.label}`}
-                  draggable={false}
-                  className={`absolute inset-0 h-full max-w-none object-cover transition-transform duration-300 ${
-                    activeTab.id === "hair"
-                      ? "scale-[1.3] lg:scale-[1.7] origin-center"
-                      : activeTab.id === "acne"
-                      ? "scale-[1.4] origin-center"
-                      : "scale-[1.3] origin-top"
-                  }`}
-                  style={{
-                    width: `${100 / (pos / 100)}%`,
-                  }}
-                />
-              </div>
+              <img
+                src={activeTab.before}
+                alt={`Before treatment for ${activeTab.label}`}
+                draggable={false}
+                className={`absolute inset-0 w-full h-full object-cover max-lg:scale-100 ${
+                  activeTab.id === "hair"
+                    ? "lg:scale-[1.5] origin-center"
+                    : activeTab.id === "acne"
+                    ? "lg:scale-[1.25] origin-center"
+                    : "lg:scale-[1.15] origin-top"
+                }`}
+                style={{ clipPath: `inset(0 ${100 - pos}% 0 0)` }}
+              />
             </motion.div>
           </AnimatePresence>
 
