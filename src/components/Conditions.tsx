@@ -75,7 +75,7 @@ export function Conditions() {
               whileInView={{ scale: 1 }}
               whileHover={{ scale: 1.08 }}
               transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
+              viewport={{ once: false, amount: 0.2, margin: "100px 0px 100px 0px" }}
               src={c.img}
               alt={c.name}
               loading="lazy"

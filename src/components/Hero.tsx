@@ -14,11 +14,10 @@ export const SPECIALTIES = [
 ];
 
 const fadeUpVariant = {
-  hidden: { opacity: 0, y: 30, filter: "blur(4px)" },
+  hidden: { opacity: 0, y: 30 },
   visible: {
     opacity: 1,
     y: 0,
-    filter: "blur(0px)",
     transition: { duration: 0.8, ease: "easeOut" as const },
   },
 };
@@ -133,7 +132,7 @@ export function Hero() {
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: false, amount: 0.2, margin: "100px 0px 100px 0px" }}
             transition={{ duration: 0.6 }}
             className="flex flex-wrap gap-8 sm:gap-14 text-cream"
           >

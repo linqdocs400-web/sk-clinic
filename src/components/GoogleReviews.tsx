@@ -46,7 +46,7 @@ export function GoogleReviews() {
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: false, amount: 0.2, margin: "100px 0px 100px 0px" }}
           className="flex flex-col md:flex-row md:items-end justify-between gap-6"
         >
           <div>
@@ -128,7 +128,7 @@ export function GoogleReviews() {
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: false, amount: 0.2, margin: "100px 0px 100px 0px" }}
           className="mt-14 flex flex-wrap items-center justify-center gap-4"
         >
           <a

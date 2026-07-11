@@ -66,7 +66,7 @@ export function BeforeAfter() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: false, amount: 0.2, margin: "100px 0px 100px 0px" }}
           className="font-script text-2xl text-ink-soft"
         >
           before &amp; after
@@ -75,7 +75,7 @@ export function BeforeAfter() {
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: false, amount: 0.2, margin: "100px 0px 100px 0px" }}
           className="font-display text-4xl sm:text-5xl text-ink mt-2"
         >
           Drag the line. See the difference.
@@ -105,7 +105,7 @@ export function BeforeAfter() {
           ref={wrapRef}
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
+          viewport={{ once: false, amount: 0.2, margin: "100px 0px 100px 0px" }}
           transition={{ duration: 0.5 }}
           className="relative mt-10 mx-auto w-full max-w-md lg:max-w-3xl aspect-[4/5] lg:aspect-[16/10] overflow-hidden rounded-xl shadow-2xl bg-black"
         >
