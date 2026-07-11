@@ -1,5 +1,6 @@
 import doctorImg from "../assets/doctor.png";
 import { Icon } from "./Icon";
+import { motion } from "framer-motion";
 
 export function About() {
   return (
@@ -39,11 +40,15 @@ export function About() {
             ))}
           </ul>
         </div>
-        <div className="relative flex items-center justify-center py-4">
-          <img
+        <div className="relative flex items-center justify-center py-4 overflow-hidden rounded-3xl">
+          <motion.img
+            initial={{ opacity: 0, x: 80 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+            viewport={{ once: false, amount: 0.2, margin: "100px 0px 100px 0px" }}
             src={doctorImg}
             alt="Dr. Koushik in clinic"
-            className="w-[85%] max-w-[400px] lg:max-w-[450px] aspect-[4/5] object-cover object-top rounded-3xl shadow-xl animate-pop-in"
+            className="w-[85%] max-w-[400px] lg:max-w-[450px] aspect-[4/5] object-cover object-top rounded-3xl shadow-xl"
           />
         </div>
       </div>
