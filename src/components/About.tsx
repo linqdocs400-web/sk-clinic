@@ -19,7 +19,7 @@ export function About() {
           </div>
           <div className="mt-6 h-px w-16 bg-ink/30" />
           <p className="mt-6 text-ink/75 leading-relaxed max-w-md">
-            Dr. P. Kaushik Kumar specializes in clinical dermatology, dermatosurgery, laser treatments, and hair restoration, offering evidence-based care tailored to every patient.
+            Dr. P. Kaushik Kumar specializes in clinical dermatology, dermatosurgery, light therapy, and hair restoration, offering evidence-based care tailored to every patient.
           </p>
           <p className="mt-4 text-ink/75 leading-relaxed max-w-md">
             From acne, pigmentation, psoriasis, eczema, vitiligo, and hair loss to advanced laser procedures, mole & wart removal, cosmetic dermatology, and confidential STD care, every treatment is delivered with modern technology and a patient-first approach.
@@ -47,7 +47,7 @@ export function About() {
             transition={{ duration: 1, ease: "easeOut" }}
             viewport={{ once: false, amount: 0.2, margin: "100px 0px 100px 0px" }}
             src={doctorImg}
-            alt="Dr. Koushik in clinic"
+            alt="Dr. Kaushik in clinic"
             className="w-[85%] max-w-[400px] lg:max-w-[450px] aspect-[4/5] object-cover object-top rounded-3xl shadow-xl"
           />
         </div>

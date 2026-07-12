@@ -37,12 +37,13 @@ export function Header() {
         {/* Right Side */}
         <div className="flex items-center gap-3">
 
-          <Link 
-            to="/book"
+          <a 
+            href="https://wa.me/918985504044?text=Hello!%20I'd%20like%20to%20book%20an%20appointment.%20Please%20let%20me%20know%20your%20availability." target="_blank" rel="noopener noreferrer"
             className="bg-ink text-cream uppercase tracking-[0.1em] sm:tracking-[0.22em] text-[9px] sm:text-xs px-2.5 py-2 sm:px-7 sm:py-4 hover:bg-ink-soft transition"
           >
-            Book Appointment
-          </Link>
+            <span className="hidden sm:inline">Book Appointment</span>
+            <span className="sm:hidden">Book Now</span>
+          </a>
 
           <button
             onClick={() => setOpen(!open)}
@@ -74,13 +75,13 @@ export function Header() {
               </a>
             ))}
 
-            <Link 
-              to="/book"
+            <a 
+              href="https://wa.me/918985504044?text=Hello!%20I'd%20like%20to%20book%20an%20appointment.%20Please%20let%20me%20know%20your%20availability." target="_blank" rel="noopener noreferrer"
               onClick={() => setOpen(false)}
               className="mt-2 bg-ink text-cream text-center uppercase tracking-[0.22em] text-xs px-6 py-4 block"
             >
-              Book Appointment
-            </Link>
+              Book Now
+            </a>
 
           </div>
         </div>

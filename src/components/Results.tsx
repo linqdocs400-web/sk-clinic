@@ -40,7 +40,7 @@ export const RESULTS = [
     img: palmarResult,
   },
   {
-    label: "Erythrasma",
+    label: "Erythrasma - UV Light",
     meta: "4 WEEKS",
     sub: "Effective treatment for bacterial skin infection.",
     img: erythrasmaResult,
@@ -68,7 +68,7 @@ export function Results() {
           <div className="overflow-hidden rounded-xl bg-ink/10">
             <img
               src={r.img}
-              alt={`Successful treatment results for ${r.label} at Siri & Koushik's Clinic, Dermatologist in Hyderabad`}
+              alt={`Successful treatment results for ${r.label} at Siri & Kaushik's Clinic, Dermatologist in Hyderabad`}
               loading="lazy"
               className="w-full h-auto object-contain bg-black/5"
             />

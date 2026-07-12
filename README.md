@@ -1,4 +1,4 @@
-# Siri & Koushik's Skin Hair STD Clinic
+# Siri & Kaushik's Skin Hair STD Clinic
 
 Marketing website for the dermatology clinic in Dilsukhnagar, Hyderabad.
 

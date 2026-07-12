@@ -6,7 +6,7 @@ const REVIEWS = [
   {
     name: "Anjali Rao",
     date: "1 week ago",
-    text: "Dr. Koushik is incredible. He took the time to understand my skin concerns and explained the treatment plan clearly. Highly recommend!",
+    text: "Dr. Kaushik is incredible. He took the time to understand my skin concerns and explained the treatment plan clearly. Highly recommend!",
     photo: "A",
   },
   {
@@ -24,7 +24,7 @@ const REVIEWS = [
   {
     name: "Karan Singh",
     date: "2 months ago",
-    text: "I was struggling with severe pigmentation for years. The personalized care and advanced laser treatments here changed everything for me.",
+    text: "I was struggling with severe pigmentation for years. The personalized care and advanced treatments here changed everything for me.",
     photo: "K",
   },
   {

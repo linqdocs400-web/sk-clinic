@@ -12,15 +12,15 @@ import allergyImg from "../assets/Allergic Contact Dermatitis.jpg";
 
 export const CONDITIONS = [
   {
-    name: "Acne & Acne Scars",
+    name: "Cystic Acne",
     blurb:
-      "Advanced treatment for acne, acne scars, oily skin and enlarged pores.",
+      "Advanced treatment for acne, acne scars, oily skin and enlarged pores. Can be cured by 3 months.",
     img: acneImg,
   },
   {
     name: "Hair Fall & Hair Regrowth",
     blurb:
-      "PRP, GFC therapy and personalized solutions for hair loss and thinning.",
+      "PRP, GFC therapy and personalized solutions for hair loss and thinning. Can be cured in 1-4 months.",
     img: hairImg,
   },
   {
@@ -30,9 +30,9 @@ export const CONDITIONS = [
     img: melasmaImg,
   },
   {
-    name: "Tinea Capitis",
+    name: "Dandruff",
     blurb:
-      "Expert diagnosis and treatment for fungal infections affecting the scalp and hair.",
+      "Expert diagnosis and treatment for severe dandruff and flaky scalp.",
     img: tineaImg,
   },
   {

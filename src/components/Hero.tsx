@@ -49,7 +49,7 @@ export function Hero() {
                 animate={{ scale: 1 }}
                 transition={{ duration: 2, ease: "easeOut" }}
                 src={doctorImg}
-                alt="Dr. Koushik, Dermatologist"
+                alt="Dr. Kaushik, Dermatologist"
                 className="w-full h-[460px] sm:h-[560px] lg:h-[640px] object-cover object-top brightness-[1.03] contrast-[1.02]"
                 width={1024}
                 height={1536}
@@ -97,14 +97,14 @@ export function Hero() {
               variants={fadeUpVariant}
               className="mt-6 max-w-xl text-ink/70 text-[15px] leading-relaxed"
             >
-              Expert dermatology, trichology, cosmetic and laser treatments — delivered with
+              Expert dermatology, trichology and advanced treatments — delivered with
               precision, care and the trust of thousands of patients across Hyderabad.
             </motion.p>
             <motion.div
               variants={fadeUpVariant}
               className="mt-8 flex flex-wrap gap-3"
             >
-              <Link to="/book" className="inline-block">
+              <a href="https://wa.me/918985504044?text=Hello!%20I'd%20like%20to%20book%20an%20appointment.%20Please%20let%20me%20know%20your%20availability." target="_blank" rel="noopener noreferrer" className="inline-block">
                 <motion.div
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -112,7 +112,7 @@ export function Hero() {
                 >
                   Book Appointment
                 </motion.div>
-              </Link>
+              </a>
               <motion.a
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -146,18 +146,21 @@ export function Hero() {
       {/* Specialty marquee */}
       <div className="bg-rose/30 border-y border-ink/5">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10 py-5 overflow-hidden">
-          <div className="flex items-center gap-8 sm:gap-12 text-ink font-display text-lg sm:text-xl whitespace-nowrap animate-[marquee_40s_linear_infinite]">
+          <motion.div 
+            className="flex w-max items-center gap-8 sm:gap-12 text-ink font-display text-lg sm:text-xl whitespace-nowrap"
+            animate={{ x: [0, "-50%"] }}
+            transition={{ repeat: Infinity, ease: "linear", duration: 40 }}
+          >
             {[...SPECIALTIES, ...SPECIALTIES].map((s, i) => (
               <span key={i} className="flex items-center gap-8 sm:gap-12">
                 <span className="italic">{s}</span>
                 <span className="text-ink/30">◆</span>
               </span>
             ))}
-          </div>
+          </motion.div>
         </div>
       </div>
 
-      <style>{`@keyframes marquee {from{transform:translateX(0)}to{transform:translateX(-50%)}}`}</style>
     </section>
   );
 }
