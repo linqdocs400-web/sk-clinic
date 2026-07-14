@@ -4,35 +4,66 @@ import { useAutoScroll } from "../hooks/useAutoScroll";
 
 const REVIEWS = [
   {
-    name: "Anjali Rao",
-    date: "1 week ago",
-    text: "Dr. Kaushik is incredible. He took the time to understand my skin concerns and explained the treatment plan clearly. Highly recommend!",
-    photo: "A",
-  },
-  {
-    name: "Vikram Reddy",
-    date: "3 weeks ago",
-    text: "The clinic is beautiful and the staff is very welcoming. I saw results from my hair fall treatment within the first few sessions.",
+    name: "VAMSHI CHEGURI",
+    text: "Had a very good experience at this clinic. I visited for concerns like hair fall, thinning, reduced density, premature greying, and scalp issues. The doctor was patient, professional, and never seemed rushed. He listened carefully, explained each issue in detail, identified the root causes, and suggested a step-by-step treatment plan along with the necessary tests...",
     photo: "V",
+    link: "https://maps.app.goo.gl/dDgQGKsGBfxeZNcY9",
+    truncate: true
   },
   {
-    name: "Sneha Patel",
-    date: "1 month ago",
-    text: "Best dermatologist in Hyderabad. Very professional and the hygiene standards are top-notch. My acne scars have faded significantly.",
+    name: "Raju Goud",
+    text: "I have been suffering with pigmentation on my nose since 4 months..  consulted the doctor here . Could see improvement in just 7 days.. very good results . Polite staff.. clean environment.  Best skin clinic in dilsukhnagar.",
+    photo: "R",
+    link: "https://maps.app.goo.gl/Cbu7PfQSkTWq63ki6"
+  },
+  {
+    name: "Sandhya Bhaskar",
+    text: "I got anti aging treatment done here.. Got yellow chemical peel done. Could notice significant improvement in few days. Best skin clinic in Dilsukhnagar Gaddiannaram. Will surely recommend to my family and friends",
     photo: "S",
+    link: "https://maps.app.goo.gl/REKaGDgDyKLWsLry5"
   },
   {
-    name: "Karan Singh",
-    date: "2 months ago",
-    text: "I was struggling with severe pigmentation for years. The personalized care and advanced treatments here changed everything for me.",
+    name: "krishnaveni Akkenapalli",
+    text: "I had bindhi allergy.. it got cured quickly. Thanks to Dr Kaushik .  Good hospital.. polite behaviour of staff",
     photo: "K",
+    link: "https://maps.app.goo.gl/H99UUR3g6qSdJo568"
   },
   {
-    name: "Priya Menon",
-    date: "2 months ago",
-    text: "Absolutely premium experience from start to finish. The clinic feels like a spa and the doctor is genuinely caring. 5 stars!",
-    photo: "P",
+    name: "sandeep kalyankar",
+    text: "Met Dr Kaushik for my face tan...doctor suggest a night serum and morning sunscreen.   My face is glowing .. very good results .  Best Skin Specialist in Dilsukhnagar .. good clinic for skin problems.",
+    photo: "S",
+    link: "https://maps.app.goo.gl/HDSPEdyTzFJ7fybSA"
   },
+  {
+    name: "Akhil sai chandra",
+    text: "I have been suffering with baldness since past few years.. i visited Dr Kaushik's clinic here for GFC Treatment.  I got 2 sessions done..  i could see visible results .  I have been using online products which turned out to be fake.  Understood that ,i should be using products which are prescribed by dermatologist only.. wasted a lot of money buying medicines online.. got to know products available in pharmacy are the only products genuine and which give results..    Guys if you are looking for good treatment options for hairfall, Dr Kaushik is the best .",
+    photo: "A",
+    link: "https://maps.app.goo.gl/DXsdDexusMTxJdF68"
+  },
+  {
+    name: "Bhukya Ashwine",
+    text: "I have been suffering with chronic urticaria since july 2025.. I consulted Dr Kaushik in march in bhongir.   Sir explained me about the condition and suggested me to go with ASST and prescribed Some weekly injections of 9 doses.  I could start seeing improvement after 6 injections.  Thank you so much.. I would recommend this clinic to my frnds and family for any skin and hair issue..",
+    photo: "B",
+    link: "https://maps.app.goo.gl/614i96EdQxvY8wu1A"
+  },
+  {
+    name: "Sajeed bhai",
+    text: "I had alopecia areata over my eyebrows..  i have been using the medicines which sir prescribed.  I have lot of improvement in 1 month..  very polite behaviour. Good clinic.",
+    photo: "S",
+    link: "https://maps.app.goo.gl/7atSg5kZn3WDYHy28"
+  },
+  {
+    name: "Malleshkodari Malleshkodari",
+    text: "I have satisfied with my hair treatment. Thank you so much Dr. Kaushik Kumar sir",
+    photo: "M",
+    link: "https://maps.app.goo.gl/odu7phfcfBy2pT4H6"
+  },
+  {
+    name: "Keshava Reddy",
+    text: "Dr.koushik sir was very nice i am suffering with vitligo from 4 years and I went to dr.koushik his treatment was very nice the results are amazing",
+    photo: "K",
+    link: "https://maps.app.goo.gl/ERTsNiPdzKL9oAfZ8"
+  }
 ];
 
 export function GoogleReviews() {
@@ -89,7 +120,7 @@ export function GoogleReviews() {
               {REVIEWS.map((review, i) => (
                <a
                  key={i}
-                 href="https://maps.app.goo.gl/bx29btJPjHVVmcPDA"
+                 href={review.link}
                  target="_blank"
                  rel="noopener noreferrer"
                  className="bg-cream border border-ink/10 p-7 w-[300px] sm:w-[380px] shrink-0 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 snap-center rounded-2xl block cursor-pointer"
@@ -100,7 +131,7 @@ export function GoogleReviews() {
                     </div>
                     <div>
                       <div className="font-display text-lg text-ink">{review.name}</div>
-                      <div className="text-xs text-ink/50 tracking-wide">{review.date}</div>
+                      <div className="text-xs text-ink/50 tracking-wide">5 stars</div>
                     </div>
                     <img 
                       src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" 
@@ -115,9 +146,12 @@ export function GoogleReviews() {
                       </svg>
                     ))}
                   </div>
-                  <p className="mt-3 text-sm text-ink/75 leading-relaxed">
+                  <p className={`mt-3 text-sm text-ink/75 leading-relaxed ${(review as any).truncate ? 'line-clamp-4' : ''}`}>
                     "{review.text}"
                   </p>
+                  {(review as any).truncate && (
+                    <span className="text-xs text-blue-600 font-medium mt-1 inline-block">Show more</span>
+                  )}
                 </a>
               ))}
             </div>
