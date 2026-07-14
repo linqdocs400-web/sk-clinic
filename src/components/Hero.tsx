@@ -65,13 +65,18 @@ export function Hero() {
               transition={{ delay: 0.6, duration: 0.8 }}
               className="absolute -bottom-5 right-2 sm:right-auto sm:-left-2 lg:left-6 bg-cream shadow-[0_18px_40px_-20px_rgba(0,0,0,0.25)] p-3 sm:p-4 pr-4 sm:pr-6 max-w-[260px] sm:max-w-[280px] z-10"
             >
-              <div className="text-[oklch(0.72_0.08_70)] tracking-widest text-[10px] sm:text-xs">⭐ 4.9/5 Patient Rating</div>
-              <p className="mt-1 sm:mt-2 text-[11px] sm:text-[13px] leading-snug text-ink/90">
-               "Professional, caring, and highly recommended for skin & hair treatments."
-              </p>
-              <div className="mt-1 sm:mt-2 text-[9px] sm:text-[10px] tracking-[0.24em] text-ink/55">
-                — VERIFIED PATIENT
-              </div>
+              <a href="https://goo.gl/maps/wZCSskyr4TZBReBN9?g_st=aw" target="_blank" rel="noopener noreferrer" className="block group">
+                <div className="flex items-center gap-2">
+                  <div className="text-[oklch(0.72_0.08_70)] tracking-widest text-[10px] sm:text-xs">⭐⭐⭐⭐⭐</div>
+                  <div className="text-[9px] sm:text-[10px] text-ink/50">3 weeks ago</div>
+                </div>
+                <p className="mt-1 sm:mt-2 text-[11px] sm:text-[13px] leading-snug text-ink/90 group-hover:text-ink transition-colors">
+                 "Dr. Kaushik sir is highly professional and friendly. His examination was thorough, and his diagnosis was spot on. I strongly recommend him to anyone facing skin issues."
+                </p>
+                <div className="mt-1 sm:mt-2 text-[9px] sm:text-[10px] tracking-[0.24em] text-ink/60 font-medium">
+                  — THARUN AZMERA
+                </div>
+              </a>
             </motion.div>
           </motion.div>
 
