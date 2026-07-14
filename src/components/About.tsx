@@ -22,7 +22,7 @@ export function About() {
             Dr. P. Kaushik Kumar specializes in clinical dermatology, dermatosurgery, light therapy, and hair restoration, offering evidence-based care tailored to every patient.
           </p>
           <p className="mt-4 text-ink/75 leading-relaxed max-w-md">
-            From acne, pigmentation, psoriasis, eczema, vitiligo, and hair loss to advanced laser procedures, mole & wart removal, cosmetic dermatology, and confidential STD care, every treatment is delivered with modern technology and a patient-first approach.
+            From acne, pigmentation, psoriasis, eczema, vitiligo, and hair loss to advanced laser procedures, mole & wart removal, aesthetic dermatology, and confidential STD care, every treatment is delivered with modern technology and a patient-first approach.
           </p>
           <ul className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-8 text-sm text-ink/80">
             {[
