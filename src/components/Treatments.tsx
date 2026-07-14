@@ -1,4 +1,4 @@
-aestheticimport { Icon } from "./Icon";
+import { Icon } from "./Icon";
 
 export const TREATMENT_GROUPS = [
   {
