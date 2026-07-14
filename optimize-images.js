@@ -40,11 +40,11 @@ async function run() {
   const imagesToProcess = allImages.filter(img => usedImages.has(img));
 
   console.log(`Found ${imagesToProcess.length} used images.`);
-  console.log(`Found ${unusedImages.length} unused images. Deleting them...`);
+  console.log(`Found ${unusedImages.length} unused images. Leaving them alone.`);
   
-  for (const img of unusedImages) {
-    fs.unlinkSync(path.join(ASSETS_DIR, img));
-  }
+  // for (const img of unusedImages) {
+  //   fs.unlinkSync(path.join(ASSETS_DIR, img));
+  // }
 
   let totalOriginalSize = 0;
   let totalOptimizedSize = 0;
@@ -100,8 +100,7 @@ async function run() {
       widths: targetWidths
     });
     
-    // Delete original file from assets folder since it's replaced
-    fs.unlinkSync(inputPath);
+    // fs.unlinkSync(inputPath);
   }
 
   const reduction = ((totalOriginalSize - totalOptimizedSize) / totalOriginalSize * 100).toFixed(2);
