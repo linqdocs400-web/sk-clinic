@@ -23,7 +23,7 @@ export const RESULTS: { label: string, meta: string, sub: string, img: keyof typ
     img: "melasma-results",
   },
   {
-    label: "Tinea Capitis",
+    label: "Pityriasis capitis (Dandruff)",
     meta: "6 WEEKS",
     sub: "Healthy scalp after successful fungal infection treatment.",
     img: "tinea-results",
