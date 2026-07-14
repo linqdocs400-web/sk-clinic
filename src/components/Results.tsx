@@ -1,55 +1,50 @@
 import { HorizontalRail } from "./HorizontalRail";
 
-import acneResult from "../assets/acne-results.jpg";
-import hairResult from "../assets/hair-results.jpg";
-import melasmaResult from "../assets/melasma-results.jpg";
-import tineaResult from "../assets/tinea-results.jpg";
-import palmarResult from "../assets/palmar-results.jpg";
-import erythrasmaResult from "../assets/erythrasma-results.jpg";
-import allergyResult from "../assets/allergy-results.jpg";
+import { OptimizedImage } from "./OptimizedImage";
+import type { IMAGE_DATA } from "../image-data";
 
-export const RESULTS = [
+export const RESULTS: { label: string, meta: string, sub: string, img: keyof typeof IMAGE_DATA }[] = [
   {
     label: "Acne & Acne Scar",
     meta: "6 WEEKS",
     sub: "Visible reduction in acne, acne scars and healthier skin.",
-    img: acneResult,
+    img: "acne-results",
   },
   {
     label: "Hair Fall & Hair Regrowth",
     meta: "4 MONTHS",
     sub: "Improved hair density with healthier natural regrowth.",
-    img: hairResult,
+    img: "hair-results",
   },
   {
     label: "Pigmentation & Melasma",
     meta: "8 WEEKS",
     sub: "Noticeable improvement in pigmentation and uneven skin tone.",
-    img: melasmaResult,
+    img: "melasma-results",
   },
   {
     label: "Tinea Capitis",
     meta: "6 WEEKS",
     sub: "Healthy scalp after successful fungal infection treatment.",
-    img: tineaResult,
+    img: "tinea-results",
   },
   {
     label: "Palmar Psoriasis",
     meta: "3 MONTHS",
     sub: "Reduced scaling, redness and itching with advanced care.",
-    img: palmarResult,
+    img: "palmar-results",
   },
   {
     label: "Erythrasma - UV Light",
     meta: "4 WEEKS",
     sub: "Effective treatment for bacterial skin infection.",
-    img: erythrasmaResult,
+    img: "erythrasma-results",
   },
   {
     label: "Rosacea",
     meta: "3 WEEKS",
     sub: "Noticeable relief from redness, inflammation, and facial sensitivity.",
-    img: allergyResult,
+    img: "allergy-results",
   },
 ];
 
@@ -66,10 +61,10 @@ export function Results() {
           className="snap-start shrink-0 w-[78%] sm:w-[44%] lg:w-[26%]"
         >
           <div className="overflow-hidden rounded-xl bg-ink/10">
-            <img
-              src={r.img}
+            <OptimizedImage
+              baseName={r.img}
               alt={`Successful treatment results for ${r.label} at Siri & Kaushik's Clinic, Dermatologist in Hyderabad`}
-              loading="lazy"
+              sizes="(max-width: 640px) 78vw, (max-width: 1024px) 44vw, 26vw"
               className="w-full h-auto object-contain bg-black/5"
             />
           </div>

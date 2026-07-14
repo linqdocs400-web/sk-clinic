@@ -2,31 +2,27 @@ import { useState, useRef } from "react";
 import { Icon } from "./Icon";
 import { motion, AnimatePresence } from "framer-motion";
 
-import hairBefore from "../assets/before.jpeg";
-import hairAfter from "../assets/after.jpeg";
-import acneBefore from "../assets/acne before.jpeg";
-import acneAfter from "../assets/acne after.jpeg";
-import allergyBefore from "../assets/skin before.jpeg";
-import allergyAfter from "../assets/skin after.jpeg";
+import { OptimizedImage } from "./OptimizedImage";
+import type { IMAGE_DATA } from "../image-data";
 
-const CATEGORIES = [
+const CATEGORIES: { id: string, label: string, before: keyof typeof IMAGE_DATA, after: keyof typeof IMAGE_DATA }[] = [
   {
     id: "hair",
     label: "Hair Restoration",
-    before: hairBefore,
-    after: hairAfter,
+    before: "before",
+    after: "after",
   },
   {
     id: "acne",
     label: "Acne Clear",
-    before: acneBefore,
-    after: acneAfter,
+    before: "acne-before",
+    after: "acne-after",
   },
   {
     id: "allergy",
     label: "Skin Allergy",
-    before: allergyBefore,
-    after: allergyAfter,
+    before: "skin-before",
+    after: "skin-after",
   },
 ];
 
@@ -118,10 +114,10 @@ export function BeforeAfter() {
               className="absolute inset-0"
             >
               {/* AFTER IMAGE */}
-              <img
-                src={activeTab.after}
+              <OptimizedImage
+                baseName={activeTab.after}
                 alt={`After treatment for ${activeTab.label}`}
-                draggable={false}
+                sizes="(max-width: 1024px) 100vw, 768px"
                 className={`absolute inset-0 w-full h-full object-cover max-lg:scale-100 ${
                   activeTab.id === "hair"
                     ? "lg:scale-[1.35] origin-center"
@@ -132,10 +128,10 @@ export function BeforeAfter() {
               />
 
               {/* BEFORE IMAGE */}
-              <img
-                src={activeTab.before}
+              <OptimizedImage
+                baseName={activeTab.before}
                 alt={`Before treatment for ${activeTab.label}`}
-                draggable={false}
+                sizes="(max-width: 1024px) 100vw, 768px"
                 className={`absolute inset-0 w-full h-full object-cover max-lg:scale-100 ${
                   activeTab.id === "hair"
                     ? "lg:scale-[1.35] origin-center"

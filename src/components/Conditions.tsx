@@ -2,56 +2,87 @@ import { HorizontalRail } from "./HorizontalRail";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
-import acneImg from "../assets/acne.jpg";
-import hairImg from "../assets/hair.jpg";
-import melasmaImg from "../assets/melasma.jpg";
-import tineaImg from "../assets/tinea.jpg";
-import palmarImg from "../assets/palmar.jpg";
-import erythrasmaImg from "../assets/erythrasma.jpg";
-import allergyImg from "../assets/Allergic Contact Dermatitis.jpg";
+import { OptimizedImage } from "./OptimizedImage";
+import type { IMAGE_DATA } from "../image-data";
 
-export const CONDITIONS = [
+export const CONDITIONS: { name: string, blurb: string, img: keyof typeof IMAGE_DATA }[] = [
   {
-    name: "Cystic Acne",
+    name: "Truncal Acne",
     blurb:
-      "Advanced treatment for acne, acne scars, oily skin and enlarged pores. Can be cured by 3 months.",
-    img: acneImg,
+      "Acne affecting the chest, back, and shoulders. Early treatment helps prevent painful breakouts and permanent scarring.",
+    img: "C10-TRUNCAL-ACNE",
   },
   {
-    name: "Hair Fall & Hair Regrowth",
+    name: "Melasma",
     blurb:
-      "PRP, GFC therapy and personalized solutions for hair loss and thinning. Can be cured in 1-4 months.",
-    img: hairImg,
+      "A common pigmentation disorder causing brown or gray patches on the face. Expert treatment can help reduce discoloration and improve skin tone.",
+    img: "C3-Melasma",
   },
   {
-    name: "Pigmentation & Melasma",
+    name: "Acne",
     blurb:
-      "Treatment for pigmentation, melasma, tanning and uneven skin tone.",
-    img: melasmaImg,
+      "A skin condition that causes pimples, blackheads, and inflamed bumps. Personalized treatment helps control breakouts and minimize acne scars.",
+    img: "C9-Acne",
   },
   {
-    name: "Dandruff",
+    name: "Pityriasis Alba (P. Alba)",
     blurb:
-      "Expert diagnosis and treatment for severe dandruff and flaky scalp.",
-    img: tineaImg,
+      "A common condition causing light-colored patches, especially in children and young adults. It is harmless and improves with proper skincare and treatment.",
+    img: "C8-P-Alba",
   },
   {
-    name: "Palmar Psoriasis",
+    name: "Pityriasis Versicolor",
     blurb:
-      "Specialized care for psoriasis affecting the palms with advanced treatment options.",
-    img: palmarImg,
+      "A fungal skin infection that causes lighter or darker patches on the skin. It can be effectively treated with appropriate medications.",
+    img: "C7-pityriasis-versicolor",
   },
   {
-    name: "Erythrasma",
+    name: "Herpes Zoster (Shingles)",
     blurb:
-      "Accurate diagnosis and effective treatment for bacterial skin infections.",
-    img: erythrasmaImg,
+      "A viral infection that causes a painful rash with blisters, usually on one side of the body. Early treatment helps reduce pain and complications.",
+    img: "C6-Herpes-zoster",
   },
   {
-    name: "Allergic Contact Dermatitis",
+    name: "Vitiligo",
     blurb:
-      "Treatment for allergic skin reactions, itching, redness and inflammation.",
-    img: allergyImg,
+      "A condition where the skin loses its natural pigment, leading to white patches. Modern treatments can help restore pigmentation and manage progression.",
+    img: "C5-Vitiligo",
+  },
+  {
+    name: "Lichen Planus",
+    blurb:
+      "An inflammatory condition causing itchy, purple-colored skin lesions or oral sores. Timely treatment helps relieve symptoms and prevent recurrence.",
+    img: "C4-Lichen-planus",
+  },
+  {
+    name: "Insect Bite Reaction",
+    blurb:
+      "An allergic or inflammatory response to insect bites causing redness, swelling, and itching. Treatment helps reduce discomfort and prevent infection.",
+    img: "C2-Insect-Bite-Reaction",
+  },
+  {
+    name: "Alopecia Areata",
+    blurb:
+      "An autoimmune condition that causes sudden patchy hair loss. Early diagnosis improves the chances of successful hair regrowth.",
+    img: "C11-Alopecia-areata",
+  },
+  {
+    name: "Androgenetic Alopecia",
+    blurb:
+      "The most common form of hereditary hair loss affecting both men and women. Advanced therapies can slow hair loss and stimulate regrowth.",
+    img: "C1-ANDROGENETIC-ALOPECIA",
+  },
+  {
+    name: "Seborrheic Dermatitis",
+    blurb:
+      "A chronic skin condition causing dandruff, redness, and flaky skin on the scalp and face. Proper treatment keeps symptoms under control.",
+    img: "C14-Seborrheic-Dermatitis",
+  },
+  {
+    name: "Chronic Plaque Psoriasis",
+    blurb:
+      "A long-term autoimmune skin disease causing thick, red, scaly patches. Personalized treatment helps manage flare-ups and improve quality of life.",
+    img: "C13-Chronic-Plaque-Psoriasis",
   },
 ];
 
@@ -70,17 +101,21 @@ export function Conditions() {
           className="snap-start shrink-0 w-[78%] sm:w-[44%] lg:w-[26%] group cursor-pointer"
         >
           <div className="relative overflow-hidden rounded-xl bg-ink/10">
-            <motion.img
+            <motion.div
               initial={{ scale: 1.08 }}
               whileInView={{ scale: 1 }}
               whileHover={{ scale: 1.08 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: false, amount: 0.2, margin: "100px 0px 100px 0px" }}
-              src={c.img}
-              alt={c.name}
-              loading="lazy"
-              className="w-full h-auto object-contain bg-black/5"
-            />
+              className="w-full h-auto aspect-square sm:aspect-auto"
+            >
+              <OptimizedImage
+                baseName={c.img}
+                alt={c.name}
+                sizes="(max-width: 640px) 78vw, (max-width: 1024px) 44vw, 26vw"
+                className="w-full h-auto object-contain bg-black/5"
+              />
+            </motion.div>
 
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
 

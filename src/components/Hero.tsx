@@ -1,4 +1,4 @@
-import doctorImg from "../assets/doctor.png";
+import { OptimizedImage } from "./OptimizedImage";
 import { Stat } from "./Stat";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
@@ -44,16 +44,20 @@ export function Hero() {
           >
             <div className="absolute -top-6 -left-2 lg:-left-6 w-40 h-44 border border-ink/15 hidden sm:block" />
             <div className="relative overflow-hidden bg-panel">
-              <motion.img
+              <motion.div
                 initial={{ scale: 1.05 }}
                 animate={{ scale: 1 }}
                 transition={{ duration: 2, ease: "easeOut" }}
-                src={doctorImg}
-                alt="Dr. Kaushik, Dermatologist"
-                className="w-full h-[460px] sm:h-[560px] lg:h-[640px] object-cover object-top brightness-[1.03] contrast-[1.02]"
-                width={1024}
-                height={1536}
-              />
+                className="w-full h-[460px] sm:h-[560px] lg:h-[640px]"
+              >
+                <OptimizedImage
+                  baseName="doctor"
+                  alt="Dr. Kaushik, Dermatologist"
+                  priority={true}
+                  sizes="(min-width: 1024px) 50vw, 100vw"
+                  className="w-full h-full object-cover object-top brightness-[1.03] contrast-[1.02]"
+                />
+              </motion.div>
             </div>
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
