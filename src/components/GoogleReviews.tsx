@@ -123,7 +123,7 @@ export function GoogleReviews() {
                  href={review.link}
                  target="_blank"
                  rel="noopener noreferrer"
-                 className="bg-cream border border-ink/10 p-7 w-[300px] sm:w-[380px] shrink-0 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 snap-center rounded-2xl block cursor-pointer"
+                 className="bg-cream border border-ink/10 p-5 sm:p-6 w-[260px] sm:w-[320px] shrink-0 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 snap-center rounded-2xl block cursor-pointer"
                 >
                   <div className="flex items-center gap-4">
                     <div className="w-12 h-12 rounded-full bg-ink text-cream flex items-center justify-center font-display text-xl">
