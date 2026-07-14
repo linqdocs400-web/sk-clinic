@@ -35,7 +35,7 @@ export function Footer() {
           <p className="mt-5 text-sm leading-7 text-white/75 max-w-sm">
             Siri &amp; Kaushik's Skin, Hair, STD Dermatosurgery &amp; Laser
             Clinic provides comprehensive dermatology, hair restoration,
-            cosmetic dermatology, laser procedures, and confidential STD care
+            Aesthetic dermatology, laser procedures, and confidential STD care
             with a patient-first approach.
           </p>
 
