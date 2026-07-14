@@ -123,7 +123,7 @@ export function GoogleReviews() {
                  href={review.link}
                  target="_blank"
                  rel="noopener noreferrer"
-                 className="bg-cream border border-ink/10 p-5 sm:p-6 w-[260px] sm:w-[320px] shrink-0 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 snap-center rounded-2xl block cursor-pointer"
+                 className="group bg-cream border border-ink/10 p-5 sm:p-6 w-[260px] sm:w-[320px] h-[240px] flex flex-col shrink-0 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 snap-center rounded-2xl cursor-pointer"
                 >
                   <div className="flex items-center gap-4">
                     <div className="w-12 h-12 rounded-full bg-ink text-cream flex items-center justify-center font-display text-xl">
@@ -146,12 +146,10 @@ export function GoogleReviews() {
                       </svg>
                     ))}
                   </div>
-                  <p className={`mt-3 text-sm text-ink/75 leading-relaxed ${(review as any).truncate ? 'line-clamp-4' : ''}`}>
+                  <p className="mt-3 text-sm text-ink/75 leading-relaxed line-clamp-4 flex-grow">
                     "{review.text}"
                   </p>
-                  {(review as any).truncate && (
-                    <span className="text-xs text-blue-600 font-medium mt-1 inline-block">Show more</span>
-                  )}
+                  <span className="text-xs text-ink/40 font-medium mt-2 group-hover:text-ink/70 transition-colors">Read on Google &rarr;</span>
                 </a>
               ))}
             </div>
