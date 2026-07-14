@@ -1,9 +1,34 @@
 {
-  "totalOriginalSizeBytes": 0,
-  "totalOptimizedSizeBytes": 0,
-  "reductionPercentage": "NaN",
-  "deletedUnusedImages": [
-    "doctor2.JPG.jpeg"
-  ],
-  "processedImages": []
+  "totalOriginalSizeBytes": 9190805,
+  "totalOptimizedSizeBytes": 21523529,
+  "reductionPercentage": "-134.19",
+  "deletedUnusedImages": [],
+  "processedImages": [
+    {
+      "original": "doctor about section.JPG.jpeg",
+      "safeBaseName": "doctor-about-section-JPG",
+      "originalSize": 7770335,
+      "optimizedSize": 18598754,
+      "widths": [
+        480,
+        768,
+        1200,
+        1600,
+        4284
+      ]
+    },
+    {
+      "original": "doctor hero section.JPG.jpeg",
+      "safeBaseName": "doctor-hero-section-JPG",
+      "originalSize": 1420470,
+      "optimizedSize": 2924775,
+      "widths": [
+        480,
+        768,
+        1200,
+        1600,
+        3024
+      ]
+    }
+  ]
 }

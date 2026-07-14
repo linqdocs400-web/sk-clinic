@@ -1,4 +1,4 @@
-import doctorImg from "../assets/doctor about section.JPG.jpeg";
+import { OptimizedImage } from "./OptimizedImage";
 import { Icon } from "./Icon";
 import { motion } from "framer-motion";
 
@@ -41,15 +41,20 @@ export function About() {
           </ul>
         </div>
         <div className="relative flex items-center justify-center py-4 overflow-hidden rounded-3xl">
-          <motion.img
+          <motion.div
             initial={{ opacity: 0, x: 80 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, ease: "easeOut" }}
             viewport={{ once: false, amount: 0.2, margin: "100px 0px 100px 0px" }}
-            src={doctorImg}
-            alt="Dr. Kaushik in clinic"
-            className="w-[85%] max-w-[400px] lg:max-w-[450px] aspect-[4/5] object-cover object-top rounded-3xl shadow-xl"
-          />
+            className="w-[85%] max-w-[400px] lg:max-w-[450px] aspect-[4/5]"
+          >
+            <OptimizedImage
+              baseName="doctor-about-section-JPG"
+              alt="Dr. Kaushik in clinic"
+              sizes="(max-width: 1024px) 85vw, 450px"
+              className="w-full h-full object-cover object-top rounded-3xl shadow-xl"
+            />
+          </motion.div>
         </div>
       </div>
     </section>
