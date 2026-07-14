@@ -123,15 +123,14 @@ export function GoogleReviews() {
                  href={review.link}
                  target="_blank"
                  rel="noopener noreferrer"
-                 className="group bg-cream border border-ink/10 p-5 sm:p-6 w-[260px] sm:w-[320px] h-[240px] flex flex-col shrink-0 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 snap-center rounded-2xl cursor-pointer"
+                 className="group bg-cream border border-ink/10 p-5 w-[260px] sm:w-[320px] h-[210px] flex flex-col shrink-0 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 snap-center rounded-2xl cursor-pointer"
                 >
                   <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 rounded-full bg-ink text-cream flex items-center justify-center font-display text-xl">
+                    <div className="w-10 h-10 rounded-full bg-ink text-cream flex items-center justify-center font-display text-lg shrink-0">
                       {review.photo}
                     </div>
                     <div>
-                      <div className="font-display text-lg text-ink">{review.name}</div>
-                      <div className="text-xs text-ink/50 tracking-wide">5 stars</div>
+                      <div className="font-display text-[15px] sm:text-base text-ink leading-tight">{review.name}</div>
                     </div>
                     <img 
                       src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" 
@@ -139,17 +138,19 @@ export function GoogleReviews() {
                       className="w-5 h-5 ml-auto opacity-80"
                     />
                   </div>
-                  <div className="flex text-amber-500 mt-4">
+                  <div className="flex text-amber-500 mt-3">
                     {[...Array(5)].map((_, j) => (
                       <svg key={j} className="w-4 h-4 fill-current" viewBox="0 0 20 20">
                         <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                       </svg>
                     ))}
                   </div>
-                  <p className="mt-3 text-sm text-ink/75 leading-relaxed line-clamp-4 flex-grow">
+                  <p className="mt-3 text-[13px] sm:text-sm text-ink/75 leading-relaxed line-clamp-3">
                     "{review.text}"
                   </p>
-                  <span className="text-xs text-ink/40 font-medium mt-2 group-hover:text-ink/70 transition-colors">Read on Google &rarr;</span>
+                  <div className="mt-auto pt-2">
+                    <span className="text-xs text-blue-600/80 font-medium group-hover:text-blue-600 transition-colors">Show More</span>
+                  </div>
                 </a>
               ))}
             </div>
