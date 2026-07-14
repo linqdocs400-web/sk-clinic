@@ -1,4 +1,4 @@
-aestheticimport { Icon } from "./Icon";
+import { Icon } from "./Icon";
 
 export const NAV = [
   { label: "About", href: "#about" },
