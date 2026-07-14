@@ -107,13 +107,13 @@ export function Conditions() {
               whileHover={{ scale: 1.08 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: false, amount: 0.2, margin: "100px 0px 100px 0px" }}
-              className="w-full h-auto aspect-square sm:aspect-auto"
+              className="w-full aspect-square"
             >
               <OptimizedImage
                 baseName={c.img}
                 alt={c.name}
                 sizes="(max-width: 640px) 78vw, (max-width: 1024px) 44vw, 26vw"
-                className="w-full h-auto object-contain bg-black/5"
+                className="w-full h-full object-cover bg-black/5"
               />
             </motion.div>
 
