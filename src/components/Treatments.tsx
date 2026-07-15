@@ -64,7 +64,7 @@ export function Treatments() {
             </h2>
 
             <p className="mt-5 max-w-2xl text-ink/70 leading-relaxed">
-              Personalized dermatology, hair restoration, laser procedures, cosmetic dermatology and
+              Personalized dermatology, hair restoration, laser procedures, aesthetic dermatology and
               confidential STD care under one roof.
             </p>
           </div>
