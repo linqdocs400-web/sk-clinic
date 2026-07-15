@@ -8,7 +8,7 @@ export const SPECIALTIES = [
   "Hair Loss Treatment",
   "Pigmentation Treatment",
   "Laser Hair Reduction",
-  "Botox & Fillers",
+  "Skin Boosters",
   "Skin Rejuvenation",
   "STD Treatment",
 ];
@@ -100,7 +100,7 @@ export function Hero() {
               variants={fadeUpVariant}
               className="font-script text-3xl sm:text-4xl text-ink-soft/90 mt-3"
             >
-              Expert care for every stage of life.
+              Where Skin Meets Confidence.
             </motion.div>
             <motion.p
               variants={fadeUpVariant}
