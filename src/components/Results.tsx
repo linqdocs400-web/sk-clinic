@@ -15,7 +15,7 @@ export const RESULTS: { label: string; meta: string; sub: string; img: keyof typ
       label: "Hair Fall & Hair Regrowth",
       meta: "4 MONTHS",
       sub: "Improved hair density with healthier natural regrowth.",
-      img: "hair-results",
+      img: "hair",
     },
     {
       label: "Pigmentation & Melasma",

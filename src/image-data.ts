@@ -35,4 +35,5 @@ export const IMAGE_DATA: Record<string, number[]> = {
   "tinea-results": [480, 768, 1080],
   "doctor-about-section-JPG": [480, 768, 1200, 1600],
   "doctor-hero-section-JPG": [480, 768, 1200, 1600],
+  hair: [480, 768],
 };
