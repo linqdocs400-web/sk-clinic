@@ -5,13 +5,13 @@ import { useAutoScroll } from "../hooks/useAutoScroll";
 export const REASONS = [
   { t: "Trained at the prestigious Osmania Medical College, Hyderabad", i: "award" },
   { t: "Evidence-based medical and aesthetic dermatology", i: "stethoscope" },
-  { t: "Honest, ethical, and transparent treatment approach", i: "shield" },
+  { t: "Honest, ethical, and transparent treatment approach", i: "users" },
   { t: "Personalized care for every patient", i: "heart" },
-  { t: "Expertise in advanced dermatosurgical procedures", i: "sparkle" },
+  { t: "Expertise in advanced dermatosurgical procedures", i: "gem" },
   { t: "Modern diagnostic techniques including Dermoscopy & Trichoscopy", i: "microscope" },
-  { t: "Affordable, world-class dermatological care", i: "gem" },
-  { t: "Comprehensive Skin & Hair Care", i: "leaf" },
-  { t: "Trusted Patient Care", i: "users" },
+  { t: "Affordable, world-class dermatological care", i: "leaf" },
+  { t: "Advanced Laser Technology", i: "sparkle" },
+  { t: "Safe & Hygienic Environment", i: "shield" },
   { t: "Continuous Follow-Up & Support", i: "clock" },
 ];
 
