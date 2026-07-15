@@ -8,7 +8,7 @@ export function Visit() {
           <div className="font-script text-2xl text-cream/90">visit</div>
 
           <h2 className="font-display mt-2 text-4xl text-cream sm:text-5xl lg:text-6xl">
-            Visit Siri & Kaushik's Skin Hair STD dermatosurgery & Laser Clinic.
+            Visit Siri & Kaushik's Skin, Hair, STD, Dermatosurgery & Laser Clinic.
           </h2>
         </div>
       </div>
