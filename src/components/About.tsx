@@ -18,7 +18,7 @@ export function About() {
            MBBS, MD DVL • Consultant Dermatologist | Dermatosurgeon
           </div>
           <div className="mt-6 h-px w-16 bg-ink/30" />
-          <div className="mt-6 space-y-4 text-ink/75 leading-relaxed max-w-xl text-sm lg:text-base">
+          <div className="mt-6 space-y-4 text-ink/75 leading-relaxed max-w-xl text-sm lg:text-base max-h-[350px] overflow-y-auto pr-4 custom-scrollbar">
             <p>
               Dr. P. Kaushik Kumar is a highly dedicated Consultant Dermatologist, Dermatosurgeon with a passion for delivering ethical, evidence-based, and patient-centered dermatological care. Trained at the prestigious Osmania Medical College, Hyderabad, he combines academic excellence with advanced clinical expertise to provide comprehensive treatment for skin, hair, nail, and sexually transmitted diseases (STDs).
             </p>
