@@ -36,7 +36,7 @@ export function Hero() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10 pt-10 lg:pt-16">
         <div className="grid lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] gap-10 lg:gap-14 items-end">
           {/* Portrait */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: -40 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, ease: "easeOut" }}
@@ -59,19 +59,28 @@ export function Hero() {
                 />
               </motion.div>
             </div>
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6, duration: 0.8 }}
               className="absolute -bottom-5 right-2 sm:right-auto sm:-left-2 lg:left-6 bg-cream shadow-[0_18px_40px_-20px_rgba(0,0,0,0.25)] p-3 sm:p-4 pr-4 sm:pr-6 max-w-[260px] sm:max-w-[280px] z-10"
             >
-              <a href="https://goo.gl/maps/wZCSskyr4TZBReBN9?g_st=aw" target="_blank" rel="noopener noreferrer" className="block group">
+              <a
+                href="https://goo.gl/maps/wZCSskyr4TZBReBN9?g_st=aw"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block group"
+              >
                 <div className="flex items-center gap-2">
-                  <div className="text-[oklch(0.72_0.08_70)] tracking-widest text-[10px] sm:text-xs">⭐⭐⭐⭐⭐</div>
+                  <div className="text-[oklch(0.72_0.08_70)] tracking-widest text-[10px] sm:text-xs">
+                    ⭐⭐⭐⭐⭐
+                  </div>
                   <div className="text-[9px] sm:text-[10px] text-ink/50">3 weeks ago</div>
                 </div>
                 <p className="mt-1 sm:mt-2 text-[11px] sm:text-[13px] leading-snug text-ink/90 group-hover:text-ink transition-colors">
-                 "Dr. Kaushik sir is highly professional and friendly. His examination was thorough, and his diagnosis was spot on. I strongly recommend him to anyone facing skin issues."
+                  "Dr. Kaushik sir is highly professional and friendly. His examination was
+                  thorough, and his diagnosis was spot on. I strongly recommend him to anyone facing
+                  skin issues."
                 </p>
                 <div className="mt-1 sm:mt-2 text-[9px] sm:text-[10px] tracking-[0.24em] text-ink/60 font-medium">
                   — THARUN AZMERA
@@ -81,20 +90,25 @@ export function Hero() {
           </motion.div>
 
           {/* Copy */}
-          <motion.div 
+          <motion.div
             variants={staggerContainer}
             initial="hidden"
             animate="visible"
             className="pb-10 lg:pb-16"
           >
-            <motion.div variants={fadeUpVariant} className="font-script text-4xl text-ink opacity-75">welcome</motion.div>
+            <motion.div
+              variants={fadeUpVariant}
+              className="font-script text-4xl text-ink opacity-75"
+            >
+              welcome
+            </motion.div>
             <motion.h1
               variants={fadeUpVariant}
               className="font-display text-[42px] sm:text-6xl lg:text-7xl leading-[1.05] text-ink mt-2 tracking-tight font-normal"
-             >
-            Advanced Skin, Hair
-            <br className="hidden sm:block" /> 
-            &amp; Laser Care
+            >
+              Advanced Skin, Hair
+              <br className="hidden sm:block" />
+              &amp; Laser Care
             </motion.h1>
             <motion.div
               variants={fadeUpVariant}
@@ -106,14 +120,16 @@ export function Hero() {
               variants={fadeUpVariant}
               className="mt-6 max-w-xl text-ink/70 text-[15px] leading-relaxed"
             >
-              Expert dermatology, trichology and advanced treatments — delivered with
-              precision, care and the trust of thousands of patients across Hyderabad.
+              Expert dermatology, trichology and advanced treatments — delivered with precision,
+              care and the trust of thousands of patients across Hyderabad.
             </motion.p>
-            <motion.div
-              variants={fadeUpVariant}
-              className="mt-8 flex flex-wrap gap-3"
-            >
-              <a href="https://wa.me/918985504044?text=Hello!%20I'd%20like%20to%20book%20an%20appointment.%20Please%20let%20me%20know%20your%20availability." target="_blank" rel="noopener noreferrer" className="inline-block">
+            <motion.div variants={fadeUpVariant} className="mt-8 flex flex-wrap gap-3">
+              <a
+                href="https://wa.me/918985504044?text=Hello!%20I'd%20like%20to%20book%20an%20appointment.%20Please%20let%20me%20know%20your%20availability."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block"
+              >
                 <motion.div
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -138,7 +154,7 @@ export function Hero() {
       {/* Rose stat band */}
       <div className="bg-rose mt-12 lg:-mt-32 lg:pt-40 lg:pb-12 py-10 lg:relative lg:z-[-1]">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10 lg:pl-[42%]">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: false, amount: 0.2, margin: "100px 0px 100px 0px" }}
@@ -155,7 +171,7 @@ export function Hero() {
       {/* Specialty marquee */}
       <div className="bg-rose/30 border-y border-ink/5">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10 py-5 overflow-hidden">
-          <motion.div 
+          <motion.div
             className="flex w-max items-center gap-8 sm:gap-12 text-ink font-display text-lg sm:text-xl whitespace-nowrap"
             animate={{ x: [0, "-50%"] }}
             transition={{ repeat: Infinity, ease: "linear", duration: 40 }}
@@ -169,8 +185,6 @@ export function Hero() {
           </motion.div>
         </div>
       </div>
-
     </section>
   );
 }
-

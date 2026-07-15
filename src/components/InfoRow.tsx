@@ -25,7 +25,12 @@ export function InfoRow({
 
   if (href) {
     return (
-      <a href={href} target={href.startsWith("http") ? "_blank" : undefined} rel={href.startsWith("http") ? "noopener noreferrer" : undefined} className="block hover:opacity-75 transition-opacity">
+      <a
+        href={href}
+        target={href.startsWith("http") ? "_blank" : undefined}
+        rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
+        className="block hover:opacity-75 transition-opacity"
+      >
         {content}
       </a>
     );

@@ -21,7 +21,7 @@ export function HorizontalRail({ id, label, title, children }: HorizontalRailPro
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
         <div className="flex flex-wrap items-end justify-between gap-6">
           <div>
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: false, amount: 0.2, margin: "100px 0px 100px 0px" }}
@@ -29,7 +29,7 @@ export function HorizontalRail({ id, label, title, children }: HorizontalRailPro
             >
               {label}
             </motion.div>
-            <motion.h2 
+            <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: false, amount: 0.2, margin: "100px 0px 100px 0px" }}
@@ -39,7 +39,7 @@ export function HorizontalRail({ id, label, title, children }: HorizontalRailPro
               {title}
             </motion.h2>
           </div>
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: false, amount: 0.2, margin: "100px 0px 100px 0px" }}

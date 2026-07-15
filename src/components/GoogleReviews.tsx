@@ -8,73 +8,72 @@ const REVIEWS = [
     text: "Had a very good experience at this clinic. I visited for concerns like hair fall, thinning, reduced density, premature greying, and scalp issues. The doctor was patient, professional, and never seemed rushed. He listened carefully, explained each issue in detail, identified the root causes, and suggested a step-by-step treatment plan along with the necessary tests...",
     photo: "V",
     link: "https://maps.app.goo.gl/dDgQGKsGBfxeZNcY9",
-    truncate: true
+    truncate: true,
   },
   {
     name: "Raju Goud",
     text: "I have been suffering with pigmentation on my nose since 4 months..  consulted the doctor here . Could see improvement in just 7 days.. very good results . Polite staff.. clean environment.  Best skin clinic in dilsukhnagar.",
     photo: "R",
-    link: "https://maps.app.goo.gl/Cbu7PfQSkTWq63ki6"
+    link: "https://maps.app.goo.gl/Cbu7PfQSkTWq63ki6",
   },
   {
     name: "Sandhya Bhaskar",
     text: "I got anti aging treatment done here.. Got yellow chemical peel done. Could notice significant improvement in few days. Best skin clinic in Dilsukhnagar Gaddiannaram. Will surely recommend to my family and friends",
     photo: "S",
-    link: "https://maps.app.goo.gl/REKaGDgDyKLWsLry5"
+    link: "https://maps.app.goo.gl/REKaGDgDyKLWsLry5",
   },
   {
     name: "krishnaveni Akkenapalli",
     text: "I had bindhi allergy.. it got cured quickly. Thanks to Dr Kaushik .  Good hospital.. polite behaviour of staff",
     photo: "K",
-    link: "https://maps.app.goo.gl/H99UUR3g6qSdJo568"
+    link: "https://maps.app.goo.gl/H99UUR3g6qSdJo568",
   },
   {
     name: "sandeep kalyankar",
     text: "Met Dr Kaushik for my face tan...doctor suggest a night serum and morning sunscreen.   My face is glowing .. very good results .  Best Skin Specialist in Dilsukhnagar .. good clinic for skin problems.",
     photo: "S",
-    link: "https://maps.app.goo.gl/HDSPEdyTzFJ7fybSA"
+    link: "https://maps.app.goo.gl/HDSPEdyTzFJ7fybSA",
   },
   {
     name: "Akhil sai chandra",
     text: "I have been suffering with baldness since past few years.. i visited Dr Kaushik's clinic here for GFC Treatment.  I got 2 sessions done..  i could see visible results .  I have been using online products which turned out to be fake.  Understood that ,i should be using products which are prescribed by dermatologist only.. wasted a lot of money buying medicines online.. got to know products available in pharmacy are the only products genuine and which give results..    Guys if you are looking for good treatment options for hairfall, Dr Kaushik is the best .",
     photo: "A",
-    link: "https://maps.app.goo.gl/DXsdDexusMTxJdF68"
+    link: "https://maps.app.goo.gl/DXsdDexusMTxJdF68",
   },
   {
     name: "Bhukya Ashwine",
     text: "I have been suffering with chronic urticaria since july 2025.. I consulted Dr Kaushik in march in bhongir.   Sir explained me about the condition and suggested me to go with ASST and prescribed Some weekly injections of 9 doses.  I could start seeing improvement after 6 injections.  Thank you so much.. I would recommend this clinic to my frnds and family for any skin and hair issue..",
     photo: "B",
-    link: "https://maps.app.goo.gl/614i96EdQxvY8wu1A"
+    link: "https://maps.app.goo.gl/614i96EdQxvY8wu1A",
   },
   {
     name: "Sajeed bhai",
     text: "I had alopecia areata over my eyebrows..  i have been using the medicines which sir prescribed.  I have lot of improvement in 1 month..  very polite behaviour. Good clinic.",
     photo: "S",
-    link: "https://maps.app.goo.gl/7atSg5kZn3WDYHy28"
+    link: "https://maps.app.goo.gl/7atSg5kZn3WDYHy28",
   },
   {
     name: "Malleshkodari Malleshkodari",
     text: "I have satisfied with my hair treatment. Thank you so much Dr. Kaushik Kumar sir",
     photo: "M",
-    link: "https://maps.app.goo.gl/odu7phfcfBy2pT4H6"
+    link: "https://maps.app.goo.gl/odu7phfcfBy2pT4H6",
   },
   {
     name: "Keshava Reddy",
     text: "Dr.koushik sir was very nice i am suffering with vitligo from 4 years and I went to dr.koushik his treatment was very nice the results are amazing",
     photo: "K",
-    link: "https://maps.app.goo.gl/ERTsNiPdzKL9oAfZ8"
-  }
+    link: "https://maps.app.goo.gl/ERTsNiPdzKL9oAfZ8",
+  },
 ];
 
 export function GoogleReviews() {
- const containerRef = useAutoScroll(0.35);
+  const containerRef = useAutoScroll(0.35);
 
   return (
     <section className="py-20 lg:py-28 bg-sage overflow-hidden">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
-        
         {/* Header Section */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false, amount: 0.2, margin: "100px 0px 100px 0px" }}
@@ -97,44 +96,44 @@ export function GoogleReviews() {
                   </svg>
                 ))}
               </div>
-              <div className="text-xs text-ink/60 mt-1 font-medium tracking-wide uppercase">Based on 120+ Google Reviews</div>
+              <div className="text-xs text-ink/60 mt-1 font-medium tracking-wide uppercase">
+                Based on 120+ Google Reviews
+              </div>
             </div>
           </div>
         </motion.div>
 
         {/* Carousel Section */}
-        <div 
-          className="mt-16 relative"
-        >
+        <div className="mt-16 relative">
           {/* Gradient Edges */}
           <div className="absolute left-0 top-0 bottom-0 w-8 md:w-32 bg-gradient-to-r from-sage to-transparent z-10 pointer-events-none" />
           <div className="absolute right-0 top-0 bottom-0 w-8 md:w-32 bg-gradient-to-l from-sage to-transparent z-10 pointer-events-none" />
-          
-          <div 
+
+          <div
             className="flex gap-6 overflow-x-auto pb-8 custom-scrollbar snap-x snap-mandatory touch-pan-x"
             ref={containerRef as any}
           >
-            <div
-              className="flex gap-6 min-w-max"
-            >
+            <div className="flex gap-6 min-w-max">
               {REVIEWS.map((review, i) => (
-               <a
-                 key={i}
-                 href={review.link}
-                 target="_blank"
-                 rel="noopener noreferrer"
-                 className="group bg-cream border border-ink/10 p-5 w-[260px] sm:w-[320px] h-[210px] flex flex-col shrink-0 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 snap-center rounded-2xl cursor-pointer"
+                <a
+                  key={i}
+                  href={review.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group bg-cream border border-ink/10 p-5 w-[260px] sm:w-[320px] h-[210px] flex flex-col shrink-0 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 snap-center rounded-2xl cursor-pointer"
                 >
                   <div className="flex items-center gap-4">
                     <div className="w-10 h-10 rounded-full bg-ink text-cream flex items-center justify-center font-display text-lg shrink-0">
                       {review.photo}
                     </div>
                     <div>
-                      <div className="font-display text-[15px] sm:text-base text-ink leading-tight">{review.name}</div>
+                      <div className="font-display text-[15px] sm:text-base text-ink leading-tight">
+                        {review.name}
+                      </div>
                     </div>
-                    <img 
-                      src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" 
-                      alt="Google" 
+                    <img
+                      src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg"
+                      alt="Google"
                       className="w-5 h-5 ml-auto opacity-80"
                     />
                   </div>
@@ -149,7 +148,9 @@ export function GoogleReviews() {
                     "{review.text}"
                   </p>
                   <div className="mt-auto pt-2">
-                    <span className="text-xs text-blue-600/80 font-medium group-hover:text-blue-600 transition-colors">Show More</span>
+                    <span className="text-xs text-blue-600/80 font-medium group-hover:text-blue-600 transition-colors">
+                      Show More
+                    </span>
                   </div>
                 </a>
               ))}
@@ -158,7 +159,7 @@ export function GoogleReviews() {
         </div>
 
         {/* Action Buttons */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false, amount: 0.2, margin: "100px 0px 100px 0px" }}
@@ -181,7 +182,6 @@ export function GoogleReviews() {
             Write a Review
           </a>
         </motion.div>
-
       </div>
     </section>
   );

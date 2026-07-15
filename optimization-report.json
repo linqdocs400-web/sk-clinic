@@ -1,34 +1,49 @@
 {
-  "totalOriginalSizeBytes": 9190805,
-  "totalOptimizedSizeBytes": 21523529,
-  "reductionPercentage": "-134.19",
-  "deletedUnusedImages": [],
+  "totalOriginalSizeBytes": 21878811,
+  "totalOptimizedSizeBytes": 8297477,
+  "reductionPercentage": "62.08",
   "processedImages": [
     {
-      "original": "doctor about section.JPG.jpeg",
-      "safeBaseName": "doctor-about-section-JPG",
-      "originalSize": 7770335,
-      "optimizedSize": 18598754,
-      "widths": [
-        480,
-        768,
-        1200,
-        1600,
-        4284
-      ]
+      "original": "Inside1.jpeg",
+      "safeBaseName": "Inside1",
+      "originalSize": 3526157,
+      "optimizedSize": 1010404,
+      "widths": [480, 768, 1200, 1600]
     },
     {
-      "original": "doctor hero section.JPG.jpeg",
-      "safeBaseName": "doctor-hero-section-JPG",
-      "originalSize": 1420470,
-      "optimizedSize": 2924775,
-      "widths": [
-        480,
-        768,
-        1200,
-        1600,
-        3024
-      ]
+      "original": "Inside2.jpeg",
+      "safeBaseName": "Inside2",
+      "originalSize": 3206845,
+      "optimizedSize": 945794,
+      "widths": [480, 768, 1200, 1600]
+    },
+    {
+      "original": "Inside3.jpeg",
+      "safeBaseName": "Inside3",
+      "originalSize": 3215196,
+      "optimizedSize": 1147053,
+      "widths": [480, 768, 1200, 1600]
+    },
+    {
+      "original": "Inside4.jpeg",
+      "safeBaseName": "Inside4",
+      "originalSize": 3881630,
+      "optimizedSize": 1247428,
+      "widths": [480, 768, 1200, 1600]
+    },
+    {
+      "original": "Inside5.jpeg",
+      "safeBaseName": "Inside5",
+      "originalSize": 3539621,
+      "optimizedSize": 1500693,
+      "widths": [480, 768, 1200, 1600]
+    },
+    {
+      "original": "Inside6.jpeg",
+      "safeBaseName": "Inside6",
+      "originalSize": 4509362,
+      "optimizedSize": 2446105,
+      "widths": [480, 768, 1200, 1600]
     }
   ]
 }

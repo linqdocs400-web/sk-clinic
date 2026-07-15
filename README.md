@@ -58,4 +58,5 @@ vercel --prod
 | `npm run typecheck` | Run TypeScript checks            |
 | `npm run lint`      | Run ESLint                       |
 | `npm run format`    | Format code with Prettier        |
+
 # sk-clinic

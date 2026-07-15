@@ -10,5 +10,5 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
     <MotionConfig reducedMotion="user">
       <App />
     </MotionConfig>
-  </BrowserRouter>
+  </BrowserRouter>,
 );

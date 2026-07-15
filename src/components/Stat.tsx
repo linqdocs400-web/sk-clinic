@@ -6,12 +6,8 @@ export function Stat({ n, l }: { n: string; l: string }) {
   if (isRating) {
     return (
       <div>
-        <div className="font-display text-4xl sm:text-5xl">
-          {n}
-        </div>
-        <div className="mt-1 text-[10px] tracking-[0.3em] uppercase opacity-80">
-          {l}
-        </div>
+        <div className="font-display text-4xl sm:text-5xl">{n}</div>
+        <div className="mt-1 text-[10px] tracking-[0.3em] uppercase opacity-80">{l}</div>
       </div>
     );
   }
@@ -26,9 +22,7 @@ export function Stat({ n, l }: { n: string; l: string }) {
         {count}
         {suffix}
       </div>
-      <div className="mt-1 text-[10px] tracking-[0.3em] uppercase opacity-80">
-        {l}
-      </div>
+      <div className="mt-1 text-[10px] tracking-[0.3em] uppercase opacity-80">{l}</div>
     </div>
   );
 }

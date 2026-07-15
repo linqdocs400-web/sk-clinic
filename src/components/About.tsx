@@ -7,32 +7,53 @@ export function About() {
     <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10 py-20 lg:py-28">
       <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
         <div>
-          <div className="font-script text-2xl text-ink-soft animate-fade-in-right">Meet Your Dermatologist,</div>
+          <div className="font-script text-2xl text-ink-soft animate-fade-in-right">
+            Meet Your Dermatologist,
+          </div>
           <h2
             className="font-display text-5xl lg:text-6xl text-ink mt-2 animate-fade-in-right"
             style={{ animationDelay: "0.1s" }}
           >
-           Dr. P. Kaushik Kumar
+            Dr. P. Kaushik Kumar
           </h2>
           <div className="mt-3 text-[11px] tracking-[0.28em] text-ink/60 uppercase leading-relaxed">
-           MBBS, MD DVL • Consultant Dermatologist | Dermatosurgeon
+            MBBS, MD DVL • Consultant Dermatologist | Dermatosurgeon
           </div>
           <div className="mt-6 h-px w-16 bg-ink/30" />
           <div className="mt-6 space-y-4 text-ink/75 leading-relaxed max-w-xl text-sm lg:text-base max-h-[350px] overflow-y-auto pr-4 custom-scrollbar">
             <p>
-              Dr. P. Kaushik Kumar is a highly dedicated Consultant Dermatologist, Dermatosurgeon with a passion for delivering ethical, evidence-based, and patient-centered dermatological care. Trained at the prestigious Osmania Medical College, Hyderabad, he combines academic excellence with advanced clinical expertise to provide comprehensive treatment for skin, hair, nail, and sexually transmitted diseases (STDs).
+              Dr. P. Kaushik Kumar is a highly dedicated Consultant Dermatologist, Dermatosurgeon
+              with a passion for delivering ethical, evidence-based, and patient-centered
+              dermatological care. Trained at the prestigious Osmania Medical College, Hyderabad, he
+              combines academic excellence with advanced clinical expertise to provide comprehensive
+              treatment for skin, hair, nail, and sexually transmitted diseases (STDs).
             </p>
             <p>
-              Committed to excellence in dermatology, Dr. Kaushik believes that every patient deserves honest medical advice, personalized treatment plans, and access to world-class dermatological care at an affordable cost. His approach emphasizes accurate diagnosis, patient education, and scientifically proven treatments that deliver safe, natural, and long-lasting results.
+              Committed to excellence in dermatology, Dr. Kaushik believes that every patient
+              deserves honest medical advice, personalized treatment plans, and access to
+              world-class dermatological care at an affordable cost. His approach emphasizes
+              accurate diagnosis, patient education, and scientifically proven treatments that
+              deliver safe, natural, and long-lasting results.
             </p>
             <p>
-              Dr. Kaushik completed both his MBBS (2014–2020) and MD in Dermatology, Venereology & Leprosy (2021–2025) from the renowned Osmania Medical College, Hyderabad, one of India's premier medical institutions. Following his postgraduate training, he completed one year of Senior Residency, where he gained extensive experience in managing a broad spectrum of dermatological disorders, dermatosurgical procedures, and cosmetic dermatology. With five years of cumulative clinical experience, he has successfully treated thousands of patients with diverse skin and hair concerns.
+              Dr. Kaushik completed both his MBBS (2014–2020) and MD in Dermatology, Venereology &
+              Leprosy (2021–2025) from the renowned Osmania Medical College, Hyderabad, one of
+              India's premier medical institutions. Following his postgraduate training, he
+              completed one year of Senior Residency, where he gained extensive experience in
+              managing a broad spectrum of dermatological disorders, dermatosurgical procedures, and
+              cosmetic dermatology. With five years of cumulative clinical experience, he has
+              successfully treated thousands of patients with diverse skin and hair concerns.
             </p>
             <p>
-              As an active Member of the Indian Association of Dermatologists, Venereologists and Leprologists (IADVL), Dr. Kaushik remains committed to continuous medical education and regularly updates his practice with the latest advancements in dermatology and aesthetic medicine.
+              As an active Member of the Indian Association of Dermatologists, Venereologists and
+              Leprologists (IADVL), Dr. Kaushik remains committed to continuous medical education
+              and regularly updates his practice with the latest advancements in dermatology and
+              aesthetic medicine.
             </p>
             <p>
-              This clinic is equipped with advanced Dermoscopy and Trichoscopy, enabling accurate diagnosis of skin lesions, hair disorders, and nail diseases while ensuring precise treatment planning.
+              This clinic is equipped with advanced Dermoscopy and Trichoscopy, enabling accurate
+              diagnosis of skin lesions, hair disorders, and nail diseases while ensuring precise
+              treatment planning.
             </p>
           </div>
           <ul className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-8 text-sm text-ink/80">

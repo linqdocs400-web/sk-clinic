@@ -13,7 +13,6 @@ export function Footer() {
   return (
     <footer className="bg-[#1E342B] text-white/90 mt-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10 py-16 grid gap-10 lg:grid-cols-3">
-
         {/* Brand */}
         <div>
           <div className="flex items-center gap-3">
@@ -22,9 +21,7 @@ export function Footer() {
             </div>
 
             <div>
-              <div className="font-display italic text-lg text-white">
-                Siri &amp; Kaushik's
-              </div>
+              <div className="font-display italic text-lg text-white">Siri &amp; Kaushik's</div>
 
               <div className="text-[10px] tracking-[0.32em] text-white/70">
                 SKIN • HAIR • STD • LASER
@@ -33,14 +30,12 @@ export function Footer() {
           </div>
 
           <p className="mt-5 text-sm leading-7 text-white/75 max-w-sm">
-            Siri &amp; Kaushik's Skin, Hair, STD, Dermatosurgery &amp; Laser
-            Clinic provides comprehensive dermatology, hair restoration,
-            Aesthetic dermatology, laser procedures, and confidential STD care
-            with a patient-first approach.
+            Siri &amp; Kaushik's Skin, Hair, STD, Dermatosurgery &amp; Laser Clinic provides
+            comprehensive dermatology, hair restoration, Aesthetic dermatology, laser procedures,
+            and confidential STD care with a patient-first approach.
           </p>
 
           <div className="mt-6 flex gap-3">
-
             {/* Instagram */}
             <a
               href="https://www.instagram.com/hyderabadi.derma.docs"
@@ -66,26 +61,19 @@ export function Footer() {
             >
               <Icon name="phone" className="w-4 h-4" />
             </a>
-
           </div>
         </div>
 
         {/* Quick Links & Contact Container */}
         <div className="grid grid-cols-2 gap-6 lg:gap-10 lg:col-span-2">
-          
           {/* Quick Links */}
           <div>
-            <div className="text-[11px] uppercase tracking-[0.28em] text-white/60">
-              Quick Links
-            </div>
+            <div className="text-[11px] uppercase tracking-[0.28em] text-white/60">Quick Links</div>
 
             <ul className="mt-6 space-y-4 text-sm">
               {NAV.map((n) => (
                 <li key={n.label}>
-                  <a
-                    href={n.href}
-                    className="hover:text-white transition-colors"
-                  >
+                  <a href={n.href} className="hover:text-white transition-colors">
                     {n.label}
                   </a>
                 </li>
@@ -95,9 +83,7 @@ export function Footer() {
 
           {/* Contact */}
           <div>
-            <div className="text-[11px] uppercase tracking-[0.28em] text-white/60">
-              Contact
-            </div>
+            <div className="text-[11px] uppercase tracking-[0.28em] text-white/60">Contact</div>
 
             <div className="mt-6 space-y-5 text-sm">
               <div>
@@ -110,7 +96,8 @@ export function Footer() {
                   rel="noopener noreferrer"
                   className="hover:text-white transition"
                 >
-                  Dilsukhnagar,<br />
+                  Dilsukhnagar,
+                  <br />
                   Hyderabad – 500060
                 </a>
               </div>
@@ -128,16 +115,12 @@ export function Footer() {
                   <br />
                   10:00 AM – 2:00 PM
                   <br />
-                  <span className="text-white/60">
-                    (Appointments Only)
-                  </span>
+                  <span className="text-white/60">(Appointments Only)</span>
                 </p>
               </div>
             </div>
           </div>
-          
         </div>
-
       </div>
 
       <div className="border-t border-white/10">
@@ -146,8 +129,8 @@ export function Footer() {
             © {new Date().getFullYear()} Siri &amp; Kaushik's Clinic. All Rights Reserved.
           </span>
           <span className="hidden lg:inline">
-            © {new Date().getFullYear()} Siri &amp; Kaushik's Skin, Hair, STD
-            Dermatosurgery &amp; Laser Clinic. All Rights Reserved.
+            © {new Date().getFullYear()} Siri &amp; Kaushik's Skin, Hair, STD Dermatosurgery &amp;
+            Laser Clinic. All Rights Reserved.
           </span>
         </div>
       </div>

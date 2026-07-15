@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { OptimizedImage } from "./OptimizedImage";
 import type { IMAGE_DATA } from "../image-data";
 
-export const CONDITIONS: { name: string, blurb: string, img: keyof typeof IMAGE_DATA }[] = [
+export const CONDITIONS: { name: string; blurb: string; img: keyof typeof IMAGE_DATA }[] = [
   {
     name: "Truncal Acne",
     blurb:
@@ -88,11 +88,7 @@ export const CONDITIONS: { name: string, blurb: string, img: keyof typeof IMAGE_
 
 export function Conditions() {
   return (
-    <HorizontalRail
-      id="conditions"
-      label="Conditions"
-      title="Conditions We Treat"
-    >
+    <HorizontalRail id="conditions" label="Conditions" title="Conditions We Treat">
       {CONDITIONS.map((c) => (
         <motion.article
           key={c.name}
@@ -124,9 +120,7 @@ export function Conditions() {
             </h3>
           </div>
 
-          <p className="mt-4 text-sm leading-6 text-ink/70">
-            {c.blurb}
-          </p>
+          <p className="mt-4 text-sm leading-6 text-ink/70">{c.blurb}</p>
 
           <Link
             to="/book"

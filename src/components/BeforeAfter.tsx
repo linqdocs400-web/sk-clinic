@@ -5,7 +5,12 @@ import { motion, AnimatePresence } from "framer-motion";
 import { OptimizedImage } from "./OptimizedImage";
 import type { IMAGE_DATA } from "../image-data";
 
-const CATEGORIES: { id: string, label: string, before: keyof typeof IMAGE_DATA, after: keyof typeof IMAGE_DATA }[] = [
+const CATEGORIES: {
+  id: string;
+  label: string;
+  before: keyof typeof IMAGE_DATA;
+  after: keyof typeof IMAGE_DATA;
+}[] = [
   {
     id: "hair",
     label: "Hair Restoration",
@@ -122,8 +127,8 @@ export function BeforeAfter() {
                   activeTab.id === "hair"
                     ? "lg:scale-[1.35] origin-center"
                     : activeTab.id === "acne"
-                    ? "lg:scale-[1.25] origin-center"
-                    : "lg:object-top lg:scale-[1.15] origin-top"
+                      ? "lg:scale-[1.25] origin-center"
+                      : "lg:object-top lg:scale-[1.15] origin-top"
                 }`}
               />
 
@@ -136,8 +141,8 @@ export function BeforeAfter() {
                   activeTab.id === "hair"
                     ? "lg:scale-[1.35] origin-center"
                     : activeTab.id === "acne"
-                    ? "lg:scale-[1.25] origin-center"
-                    : "lg:object-top lg:scale-[1.15] origin-top"
+                      ? "lg:scale-[1.25] origin-center"
+                      : "lg:object-top lg:scale-[1.15] origin-top"
                 }`}
                 style={{ clipPath: `inset(0 ${100 - pos}% 0 0)` }}
               />

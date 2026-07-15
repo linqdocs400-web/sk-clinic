@@ -1,31 +1,63 @@
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
-import sharp from 'sharp';
+import fs from "fs";
+import path from "path";
+import { fileURLToPath } from "url";
+import sharp from "sharp";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const ASSETS_DIR = path.join(__dirname, 'src/assets');
-const COMPONENTS_DIR = path.join(__dirname, 'src/components');
-const OUT_DIR = path.join(__dirname, 'public/optimized');
+const ASSETS_DIR = path.join(__dirname, "src/assets");
+const COMPONENTS_DIR = path.join(__dirname, "src/components");
+const OUT_DIR = path.join(__dirname, "public/optimized");
 const WIDTHS = [480, 768, 1200, 1600];
-const QUALITY = 90;
+const MAX_FILE_SIZE = 500 * 1024; // 500 KB limit
+const START_QUALITY = 90;
 
 async function scanUsedImages() {
   const usedImages = new Set();
   const files = fs.readdirSync(COMPONENTS_DIR);
   for (const file of files) {
-    if (file.endsWith('.tsx') || file.endsWith('.ts')) {
-      const content = fs.readFileSync(path.join(COMPONENTS_DIR, file), 'utf8');
-      // Match imports like: import myImg from "../assets/filename.ext";
+    if (file.endsWith(".tsx") || file.endsWith(".ts")) {
+      const content = fs.readFileSync(path.join(COMPONENTS_DIR, file), "utf8");
       const matches = content.matchAll(/import\s+.*?\s+from\s+['"]\.\.\/assets\/(.*?)['"]/g);
       for (const match of matches) {
         usedImages.add(match[1]);
       }
+
+      const baseNameMatches = content.matchAll(/baseName=['"]([^'"]+)['"]/g);
+      for (const match of baseNameMatches) {
+        // Need to find the actual file for this baseName
+        // we'll just add all extensions to be safe, or wait, baseName doesn't have the extension.
+        // I will collect baseNames here.
+      }
     }
   }
   return usedImages;
+}
+
+async function compressToTarget(imageObj, width, format) {
+  let quality = START_QUALITY;
+  let buffer;
+  while (quality >= 20) {
+    if (format === "avif") {
+      buffer = await imageObj
+        .clone()
+        .resize(width, null, { withoutEnlargement: true })
+        .avif({ quality })
+        .toBuffer();
+    } else {
+      buffer = await imageObj
+        .clone()
+        .resize(width, null, { withoutEnlargement: true })
+        .webp({ quality })
+        .toBuffer();
+    }
+    if (buffer.length <= MAX_FILE_SIZE) {
+      break;
+    }
+    quality -= 10;
+  }
+  return buffer;
 }
 
 async function run() {
@@ -33,88 +65,85 @@ async function run() {
     fs.mkdirSync(OUT_DIR, { recursive: true });
   }
 
-  const usedImages = await scanUsedImages();
-  const allImages = fs.readdirSync(ASSETS_DIR).filter(f => f.match(/\.(jpg|jpeg|png)$/i));
-  
-  const unusedImages = allImages.filter(img => !usedImages.has(img));
-  const imagesToProcess = allImages.filter(img => usedImages.has(img));
+  const allImages = fs.readdirSync(ASSETS_DIR).filter((f) => f.match(/\.(jpg|jpeg|png)$/i));
+  const imagesToProcess = allImages;
 
-  console.log(`Found ${imagesToProcess.length} used images.`);
-  console.log(`Found ${unusedImages.length} unused images. Leaving them alone.`);
-  
-  // for (const img of unusedImages) {
-  //   fs.unlinkSync(path.join(ASSETS_DIR, img));
-  // }
+  console.log(`Found ${imagesToProcess.length} total images to process.`);
 
   let totalOriginalSize = 0;
   let totalOptimizedSize = 0;
   const processedStats = [];
+  const imageDataDict = {};
 
   for (const img of imagesToProcess) {
     const inputPath = path.join(ASSETS_DIR, img);
     const stat = fs.statSync(inputPath);
     totalOriginalSize += stat.size;
-    
+
     const ext = path.extname(img);
     const baseName = path.basename(img, ext);
-    // Sanitize baseName for URL usage (replace spaces and special chars)
-    const safeBaseName = baseName.replace(/[^a-zA-Z0-9_-]/g, '-');
-    
+    const safeBaseName = baseName.replace(/[^a-zA-Z0-9_-]/g, "-");
+
     const image = sharp(inputPath);
     const metadata = await image.metadata();
-    
-    const targetWidths = WIDTHS.filter(w => w <= metadata.width);
-    if (targetWidths.length === 0 || targetWidths[targetWidths.length - 1] < metadata.width) {
-      targetWidths.push(metadata.width);
+
+    let targetWidths = WIDTHS.filter((w) => w <= metadata.width);
+    if (targetWidths.length === 0) {
+      targetWidths = [metadata.width];
     }
-    
+
+    imageDataDict[safeBaseName] = targetWidths;
+
     let imageOptimizedSize = 0;
 
     for (const width of targetWidths) {
-      // AVIF
-      const avifBuffer = await image.clone().resize(width).avif({ quality: QUALITY }).toBuffer();
+      const avifBuffer = await compressToTarget(image, width, "avif");
       const avifPath = path.join(OUT_DIR, `${safeBaseName}-${width}w.avif`);
       fs.writeFileSync(avifPath, avifBuffer);
       imageOptimizedSize += avifBuffer.length;
 
-      // WebP
-      const webpBuffer = await image.clone().resize(width).webp({ quality: QUALITY }).toBuffer();
+      const webpBuffer = await compressToTarget(image, width, "webp");
       const webpPath = path.join(OUT_DIR, `${safeBaseName}-${width}w.webp`);
       fs.writeFileSync(webpPath, webpBuffer);
       imageOptimizedSize += webpBuffer.length;
     }
-    
+
     // Fallback WebP (max width)
-    const fallbackBuffer = await image.clone().resize(targetWidths[targetWidths.length - 1]).webp({ quality: QUALITY }).toBuffer();
+    const maxWidth = targetWidths[targetWidths.length - 1];
+    const fallbackBuffer = await compressToTarget(image, maxWidth, "webp");
     const fallbackPath = path.join(OUT_DIR, `${safeBaseName}-fallback.webp`);
     fs.writeFileSync(fallbackPath, fallbackBuffer);
     imageOptimizedSize += fallbackBuffer.length;
-    
+
     totalOptimizedSize += imageOptimizedSize;
-    
+
     processedStats.push({
       original: img,
       safeBaseName,
       originalSize: stat.size,
       optimizedSize: imageOptimizedSize,
-      widths: targetWidths
+      widths: targetWidths,
     });
-    
-    // fs.unlinkSync(inputPath);
   }
 
-  const reduction = ((totalOriginalSize - totalOptimizedSize) / totalOriginalSize * 100).toFixed(2);
-  
+  // Generate image-data.ts
+  const dictFile = path.join(__dirname, "src/image-data.ts");
+  const dictContent = `export const IMAGE_DATA: Record<string, number[]> = ${JSON.stringify(imageDataDict, null, 2)};\n`;
+  fs.writeFileSync(dictFile, dictContent);
+
+  const reduction = (((totalOriginalSize - totalOptimizedSize) / totalOriginalSize) * 100).toFixed(
+    2,
+  );
+
   const report = {
     totalOriginalSizeBytes: totalOriginalSize,
     totalOptimizedSizeBytes: totalOptimizedSize,
     reductionPercentage: reduction,
-    deletedUnusedImages: unusedImages,
-    processedImages: processedStats
+    processedImages: processedStats,
   };
 
-  fs.writeFileSync('optimization-report.json', JSON.stringify(report, null, 2));
-  console.log(`Optimization complete! Size reduced by ${reduction}%. Report saved to optimization-report.json`);
+  fs.writeFileSync("optimization-report.json", JSON.stringify(report, null, 2));
+  console.log(`Optimization complete! Size reduced by ${reduction}%.`);
 }
 
 run().catch(console.error);

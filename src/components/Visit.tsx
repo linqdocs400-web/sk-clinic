@@ -17,11 +17,7 @@ export function Visit() {
         <div className="grid gap-6 lg:grid-cols-2 lg:gap-10">
           {/* Contact Details */}
           <div className="space-y-7 rounded-lg bg-cream p-8 shadow-[0_30px_60px_-30px_rgba(0,0,0,0.25)] sm:p-10">
-            <InfoRow
-              icon="pin"
-              title="Address"
-              href="https://maps.app.goo.gl/bx29btJPjHVVmcPDA"
-            >
+            <InfoRow icon="pin" title="Address" href="https://maps.app.goo.gl/bx29btJPjHVVmcPDA">
               16-11-578/A,
               <br />
               Opposite Red Cross Hospital,
@@ -35,11 +31,7 @@ export function Visit() {
               Hyderabad – 500060
             </InfoRow>
 
-            <InfoRow
-              icon="phone"
-              title="Call / WhatsApp"
-              href="tel:+918985504044"
-            >
+            <InfoRow icon="phone" title="Call / WhatsApp" href="tel:+918985504044">
               +91 89855 04044
             </InfoRow>
 
@@ -67,9 +59,7 @@ export function Visit() {
 
                 <br />
 
-                <span className="text-xs text-ink/50">
-                  Appointments only
-                </span>
+                <span className="text-xs text-ink/50">Appointments only</span>
               </>
             </InfoRow>
           </div>
