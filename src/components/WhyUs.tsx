@@ -39,7 +39,7 @@ export function WhyUs() {
               {[...REASONS, ...REASONS, ...REASONS].map((r, index) => (
                 <div
                   key={index}
-                  className="bg-cream p-6 sm:p-8 flex flex-col items-center text-center gap-4 min-h-[180px] justify-center w-[160px] sm:w-[200px] shrink-0"
+                  className="bg-cream p-6 sm:p-8 flex flex-col items-center text-center gap-4 min-h-[180px] justify-start w-[160px] sm:w-[200px] shrink-0"
                 >
                   <span className="grid h-14 w-14 place-items-center rounded-full bg-ink text-cream">
                     <Icon name={r.i} className="w-6 h-6" />
@@ -56,7 +56,7 @@ export function WhyUs() {
               {REASONS.map((r) => (
                 <div
                   key={r.t}
-                  className="bg-cream p-6 sm:p-8 flex flex-col items-center text-center gap-4 min-h-[180px] justify-center w-auto shrink-0 hover:bg-cream/90 transition-colors"
+                  className="bg-cream p-6 sm:p-8 flex flex-col items-center text-center gap-4 min-h-[180px] justify-start w-auto shrink-0 hover:bg-cream/90 transition-colors"
                 >
                   <span className="grid h-14 w-14 place-items-center rounded-full bg-ink text-cream">
                     <Icon name={r.i} className="w-6 h-6" />
