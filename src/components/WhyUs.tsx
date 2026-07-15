@@ -3,15 +3,15 @@ import { Icon } from "./Icon";
 import { useAutoScroll } from "../hooks/useAutoScroll";
 
 export const REASONS = [
-  { t: "Experienced Consultant Dermatologists", i: "stethoscope" },
-  { t: "Advanced Laser Technology", i: "sparkle" },
-  { t: "Personalized Treatment Plans", i: "heart" },
-  { t: "Evidence-Based Treatments", i: "award" },
-  { t: "Comprehensive Skin & Hair Care", i: "leaf" },
-  { t: "Affordable Consultation", i: "gem" },
+  { t: "Trained at the prestigious Osmania Medical College, Hyderabad", i: "stethoscope" },
+  { t: "Evidence-based medical and aesthetic dermatology", i: "sparkle" },
+  { t: "Honest, ethical, and transparent treatment approach", i: "heart" },
+  { t: "Personalized care for every patient", i: "award" },
+  { t: "Expertise in advanced dermatosurgical procedures", i: "leaf" },
+  { t: "Affordable, world-class dermatological care", i: "gem" },
   { t: "Safe & Hygienic Environment", i: "shield" },
   { t: "Trusted Patient Care", i: "users" },
-  { t: "Modern Diagnostic & Laser Equipment", i: "microscope" },
+  { t: "Modern diagnostic techniques including Dermoscopy & Trichoscopy", i: "microscope" },
   { t: "Continuous Follow-Up & Support", i: "clock" },
 ];
 
