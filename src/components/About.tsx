@@ -1,8 +1,10 @@
+import { useState } from "react";
 import { OptimizedImage } from "./OptimizedImage";
 import { Icon } from "./Icon";
 import { motion } from "framer-motion";
 
 export function About() {
+  const [hasScrolled, setHasScrolled] = useState(false);
   return (
     <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10 py-20 lg:py-28">
       <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
@@ -20,41 +22,61 @@ export function About() {
             MBBS, MD DVL • Consultant Dermatologist | Dermatosurgeon
           </div>
           <div className="mt-6 h-px w-16 bg-ink/30" />
-          <div className="mt-6 space-y-4 text-ink/75 leading-relaxed max-w-xl text-sm lg:text-base max-h-[350px] overflow-y-auto pr-4 custom-scrollbar">
-            <p>
-              Dr. P. Kaushik Kumar is a highly dedicated Consultant Dermatologist, Dermatosurgeon
-              with a passion for delivering ethical, evidence-based, and patient-centered
-              dermatological care. Trained at the prestigious Osmania Medical College, Hyderabad, he
-              combines academic excellence with advanced clinical expertise to provide comprehensive
-              treatment for skin, hair, nail, and sexually transmitted diseases (STDs).
-            </p>
-            <p>
-              Committed to excellence in dermatology, Dr. Kaushik believes that every patient
-              deserves honest medical advice, personalized treatment plans, and access to
-              world-class dermatological care at an affordable cost. His approach emphasizes
-              accurate diagnosis, patient education, and scientifically proven treatments that
-              deliver safe, natural, and long-lasting results.
-            </p>
-            <p>
-              Dr. Kaushik completed both his MBBS (2014–2020) and MD in Dermatology, Venereology &
-              Leprosy (2021–2025) from the renowned Osmania Medical College, Hyderabad, one of
-              India's premier medical institutions. Following his postgraduate training, he
-              completed one year of Senior Residency, where he gained extensive experience in
-              managing a broad spectrum of dermatological disorders, dermatosurgical procedures, and
-              cosmetic dermatology. With five years of cumulative clinical experience, he has
-              successfully treated thousands of patients with diverse skin and hair concerns.
-            </p>
-            <p>
-              As an active Member of the Indian Association of Dermatologists, Venereologists and
-              Leprologists (IADVL), Dr. Kaushik remains committed to continuous medical education
-              and regularly updates his practice with the latest advancements in dermatology and
-              aesthetic medicine.
-            </p>
-            <p>
-              This clinic is equipped with advanced Dermoscopy and Trichoscopy, enabling accurate
-              diagnosis of skin lesions, hair disorders, and nail diseases while ensuring precise
-              treatment planning.
-            </p>
+          <div className="relative mt-6 max-w-xl">
+            <div
+              className="space-y-4 text-ink/75 leading-relaxed text-sm lg:text-base max-h-[350px] overflow-y-auto pr-4 custom-scrollbar"
+              onScroll={(e) => {
+                if (e.currentTarget.scrollTop > 5) {
+                  setHasScrolled(true);
+                } else {
+                  setHasScrolled(false);
+                }
+              }}
+            >
+              <p>
+                Dr. P. Kaushik Kumar is a highly dedicated Consultant Dermatologist, Dermatosurgeon
+                with a passion for delivering ethical, evidence-based, and patient-centered
+                dermatological care. Trained at the prestigious Osmania Medical College, Hyderabad,
+                he combines academic excellence with advanced clinical expertise to provide
+                comprehensive treatment for skin, hair, nail, and sexually transmitted diseases
+                (STDs).
+              </p>
+              <p>
+                Committed to excellence in dermatology, Dr. Kaushik believes that every patient
+                deserves honest medical advice, personalized treatment plans, and access to
+                world-class dermatological care at an affordable cost. His approach emphasizes
+                accurate diagnosis, patient education, and scientifically proven treatments that
+                deliver safe, natural, and long-lasting results.
+              </p>
+              <p>
+                Dr. Kaushik completed both his MBBS (2014–2020) and MD in Dermatology, Venereology &
+                Leprosy (2021–2025) from the renowned Osmania Medical College, Hyderabad, one of
+                India's premier medical institutions. Following his postgraduate training, he
+                completed one year of Senior Residency, where he gained extensive experience in
+                managing a broad spectrum of dermatological disorders, dermatosurgical procedures,
+                and cosmetic dermatology. With five years of cumulative clinical experience, he has
+                successfully treated thousands of patients with diverse skin and hair concerns.
+              </p>
+              <p>
+                As an active Member of the Indian Association of Dermatologists, Venereologists and
+                Leprologists (IADVL), Dr. Kaushik remains committed to continuous medical education
+                and regularly updates his practice with the latest advancements in dermatology and
+                aesthetic medicine.
+              </p>
+              <p>
+                This clinic is equipped with advanced Dermoscopy and Trichoscopy, enabling accurate
+                diagnosis of skin lesions, hair disorders, and nail diseases while ensuring precise
+                treatment planning.
+              </p>
+            </div>
+
+            <div
+              className={`absolute bottom-0 left-0 right-4 h-16 bg-gradient-to-t from-[#FAF9F6] to-transparent pointer-events-none transition-opacity duration-500 flex items-end justify-center pb-2 ${hasScrolled ? "opacity-0" : "opacity-100"}`}
+            >
+              <span className="text-xs font-medium text-ink/60 bg-[#FAF9F6] px-3 py-1 rounded-full shadow-sm border border-ink/5 animate-pulse">
+                ↓ Scroll inside to read more
+              </span>
+            </div>
           </div>
           <ul className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-8 text-sm text-ink/80">
             {[
